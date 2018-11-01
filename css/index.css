@@ -272,6 +272,13 @@ margin-left: 50px;
 margin-top: 11px;
 vertical-align: middle;
 }
+
+#nav{
+width: 100%;
+height: 400px;
+overflow: hidden;
+margin: 0 auto;
+}
 /*headnav*/
 .headnav{
 width: 100%;
@@ -368,4 +375,112 @@ width: 16px;
 height: 16px;
 background: #3e535a;
 cursor: pointer;
+}
+/*轮播图右侧*/
+.right{
+width: 260px;
+height: 400px;
+float: left;
+border-right: 1px solid #d2b994;
+border-bottom: 1px solid #d2b994;
+box-sizing: border-box;
+}
+.right .tab .tab_b{
+width: 260px;
+height: 33px;
+line-height: 32px;
+text-align: center;
+}
+.right .tab .tab_b span{
+margin: 0 10px;
+font-size: 16px;
+display: inline-block;
+cursor: pointer;
+}
+.right .tab span.active{
+color: #C7A774;
+text-decoration: underline;
+}
+.tab_s>div{
+width: 260px;
+height: 133px;
+display: none;
+}
+.tab_s div.active{
+display: block;
+}
+.mianfei{
+float: left;
+width: 260px;
+height: 80px;
+padding-left: 10px;
+}
+.mianfei img{
+cursor: pointer;
+}
+.tab .tab_con{
+width: 260px;
+height: 91px;
+}
+.zaiyi{
+float: left;
+width: 260px;
+height: 166px;
+overflow: hidden;
+}
+.yougong{
+width: 260px;
+height: 153px;
+float: left;
+overflow: hidden;
+}
+.wenzen{
+text-align: center;
+float: left;
+}
+.wenzen .xin,.wenzen .hai{
+width: 72px;
+height: 106px;
+float: left;
+margin-left: 40px;
+margin-top: 10px;
+cursor: pointer;
+}
+.wenzen .xin img,.wenzen .hai img{
+width: 72px;
+height: 72px;
+}
+.wenzen .xin p,.wenzen .hai p{
+margin-top: 10px;
+}
+.zixun ul{
+float: left;
+margin-left: 30px;
+margin-top: 15px;
+}
+.zixun ul li{
+margin-top: 5px;
+cursor: pointer;
+}
+.zixun ul li:hover{
+text-decoration: underline;
+}
+.fuwu .itu{
+width: 100%;
+height: 65px;
+position: relative;
+}
+.fuwu .itu i{
+display: inline-block;
+width: 37px;
+height: 37px;
+background: red;
+float: left;
+margin-left: 22px;
+margin-top: 20px;
+}
+.fuwu>p span{
+margin-left: 10px;
+text-align: center;
+color: #c7a774;
 }

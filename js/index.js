@@ -76,7 +76,25 @@ requirejs(["jquery","swiper","baiduT","extend","lazy","page"],function($,swiper,
 	});
 	$('.swiper-slide').mouseleave(function () {
    		swiper.autoplay.start();
-	})
+	});
+	//在线咨询
+	$(".tab").tab("active","click");
+	var s;
+	$(".wenzen img").hover(function(){
+		s=$(this).attr("src");
+		$(this).attr('src',$(this).attr("data-src"));
+	},function(){
+		$(this).attr('src',s);
+	});
+	$(".fuwu .itu i").hover(function(){
+		$(this).stop().animate({
+			"margin-top":10
+		},200);
+	},function(){
+		$(this).stop().animate({
+			"margin-top":20
+		},0);
+	});
 });
 
 //源生
