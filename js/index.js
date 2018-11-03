@@ -53,8 +53,8 @@ requirejs(["jquery","swiper","baiduT","extend","lazy","page"],function($,swiper,
 	});
 	$(".fenlei .tab_but a li").hover(function(){
 		$(this).stop().animate({
-			"margin-left":20
-		});
+			"margin-left":5
+		},300);
 	},function(){
 		$(this).stop().animate({
 			"margin-left":0
@@ -88,12 +88,45 @@ requirejs(["jquery","swiper","baiduT","extend","lazy","page"],function($,swiper,
 	});
 	$(".fuwu .itu i").hover(function(){
 		$(this).stop().animate({
-			"margin-top":10
+			"margin-top":12
 		},200);
 	},function(){
 		$(this).stop().animate({
 			"margin-top":20
 		},0);
+	});
+	$(".fenlei .tab_show").load("html/erji_show.html");
+	//楼层
+	$('.floor_ctrl>div').click(function(){//点击按钮设置卷去高度
+		var top = $('.floor>div').eq($(this).index()).offset().top;
+		$('body,html').stop().animate({
+			scrollTop:top
+		});
+	});
+	
+	$(window).scroll(function(){//卷去高度改变，设置按钮高亮。
+		var scroll = $('html,body').scrollTop();
+		var top1 = $('.floor>div').eq(0).offset().top;
+		var top2=$('.floor>div').eq(8).offset().top+450;
+		if(scroll>=top1&&scroll<=top2){
+			$('.floor_ctrl>div').css({
+				display:"block"
+			})
+		}else{
+			$('.floor_ctrl>div').css({
+				display:"none"
+			})
+		}
+		$('.floor_ctrl>div').hover(function(){
+			$(this).addClass("showit").siblings().removeClass("showit");
+		},function(){
+			$(this).removeClass("showit");
+		})
+		$('.floor>div').each(function(index,ele){
+			if(scroll>=$(ele).offset().top){
+				$('.floor_ctrl>div').eq($(ele).index()).addClass('active').siblings().removeClass("active");
+			}
+		});
 	});
 });
 
@@ -163,3 +196,19 @@ window.onload=function(){
 		},50)
 	}
 };
+function clock(){
+	var se=document.querySelector(".clock-s");
+	var ho=document.querySelector(".clock-h");
+	var date=new Date();
+	var s=3;
+	var h=0.1;
+	var seconds=date.getSeconds()*6;
+	var minutes=date.getMinutes()*6+seconds/360*6;
+	var hours=date.getHours()*30+minutes/360*30;
+	se.style.transform+="rotate("+s+"deg)";
+	ho.style.transform="rotate("+seconds+"deg)";
+}
+	setInterval(clock,100);
+	var mi=document.querySelector(".clock-m");
+	mi.style.transform+="rotate("+20+"deg)";
+	clock();
