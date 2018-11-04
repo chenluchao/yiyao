@@ -7,7 +7,8 @@ requirejs.config({
 		jquery: "libs/jquery.min",
 		lazy: "plugins/lazyload.min",
 		swiper: "plugins/swiper.min",
-		header: "modules/header"
+		header: "modules/header",
+		footer:"modules/footer"
 	},
 	shim: {
 		baiduT: {
@@ -35,7 +36,7 @@ requirejs.config({
 		//			}
 	}
 });
-requirejs(["jquery", "swiper", "baiduT", "header", "extend", "lazy", "page"], function($, swiper, baidu, header) {
+requirejs(["jquery", "swiper", "baiduT", "header","footer","extend", "lazy", "page"], function($, swiper, baidu, header,footer) {
 	//头部警告栏
 	$(".close_jing").click(function() {
 		$(".jinggao").animate({
@@ -104,7 +105,7 @@ requirejs(["jquery", "swiper", "baiduT", "header", "extend", "lazy", "page"], fu
 	$(window).scroll(function() { //卷去高度改变，设置按钮高亮。
 		var scroll = $('html,body').scrollTop();
 		var top1 = $('.floor>div').eq(0).offset().top;
-		var top2 = $('.floor>div').eq(8).offset().top + 450;
+		var top2 = $('.floor>div').eq(8).offset().top + 300;
 		if(scroll >= top1 && scroll <= top2) {
 			$('.floor_ctrl>div').css({
 				display: "block"
@@ -191,4 +192,8 @@ requirejs(["jquery", "swiper", "baiduT", "header", "extend", "lazy", "page"], fu
 	$('.swiper-slide').mouseleave(function() {
 		swiper6.autoplay.start();
 	});
+	//友情链接选项卡
+	$(".friend .tab").tab("active", "mouseenter");
+	//加载尾部
+	footer.loadfooter();
 });

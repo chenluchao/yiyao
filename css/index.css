@@ -774,10 +774,6 @@ font-size: 16px;
 text-align: center;
 cursor: pointer;
 }
-
-
-
-
 .botimg .gaismall{
 width: 100px;
 height: 100px;
@@ -896,4 +892,86 @@ background: #cac3f2;
 	z-index: 2;
 	background: #157CDB;
 	color: #FFFFFF;
+}
+/*友情链接*/
+.friendbox{
+width: 100%;
+height: 170px;
+}
+.friend{
+width: 1195px;
+height: 170px;
+margin: 0 auto;
+border: 1px solid #E8E8E8;
+}
+.friend .tab .tabbtn{
+width: 100%;
+height: 34px;
+background: #f0f0f0;
+/*border-bottom: 1px solid #E8E8E8;*/
+}
+.friend .tab .tabbtn p{
+width: 179px;
+height: 34px;
+line-height: 34px;
+text-align: center;
+float: left;
+border-right: 1px solid #E8E8E8;
+cursor: pointer;
+}
+.tabshow{
+width: 100%;
+height: 130px;
+background: #FFFFFF;
+position: relative;
+}
+.tabshow>div{
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 130px;
+display: none;
+}
+.tab .tabshow>div.active{
+display: block;
+}
+.tab .tabbtn>p.active{
+background: #FFF;
+border-bottom: none;
+}
+.friend .tab .tabshow .pinpai ul{
+width: 100%;
+height: 130px;
+background: url(../images/index_ulbg.png) no-repeat 0 20px;
+}
+.friend .tab .tabshow .pinpai ul li{
+width: 110px;
+height: 46px;
+background: #ffffff;
+float: left;
+margin-left: 7px;
+margin-top: 16px;
+opacity: 0.4;
+}
+.friend .tab .tabshow .pinpai ul li:hover{
+opacity: 0;
+cursor: pointer;
+}
+.friend .tab .tabshow .youqing ul{
+float: left;
+width: 100%;
+height: 30px;
+margin-top: 15px;
+}
+.friend .tab .tabshow .youqing ul li{
+float: left;
+width: 128px;
+height: 30px;
+line-height: 30px;
+text-align: center;
+cursor: pointer;
+}
+.friend .tab .tabshow .youqing ul li:hover{
+text-decoration: underline;
 }
