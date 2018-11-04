@@ -59,7 +59,7 @@ requirejs(["jquery", "swiper", "baiduT", "header", "extend", "lazy", "page"], fu
 		});
 	});
 	//轮播图
-	var swiper = new swiper('.swiper-container', {
+	var swiper1 = new swiper('#swiper1', {
 		loop: true,
 		autoplay: true,
 		speed: 800,
@@ -70,10 +70,10 @@ requirejs(["jquery", "swiper", "baiduT", "header", "extend", "lazy", "page"], fu
 	});
 	//轮播图鼠标移入移除效果
 	$('.swiper-slide').mouseenter(function() {
-		swiper.autoplay.stop();
+		swiper1.autoplay.stop();
 	});
 	$('.swiper-slide').mouseleave(function() {
-		swiper.autoplay.start();
+		swiper1.autoplay.start();
 	});
 	//在线咨询
 	$(".tab").tab("active", "click");
@@ -101,7 +101,6 @@ requirejs(["jquery", "swiper", "baiduT", "header", "extend", "lazy", "page"], fu
 			scrollTop: top
 		});
 	});
-
 	$(window).scroll(function() { //卷去高度改变，设置按钮高亮。
 		var scroll = $('html,body').scrollTop();
 		var top1 = $('.floor>div').eq(0).offset().top;
@@ -143,4 +142,53 @@ requirejs(["jquery", "swiper", "baiduT", "header", "extend", "lazy", "page"], fu
 	var mi = document.querySelector(".clock-m");
 	mi.style.transform += "rotate(" + 20 + "deg)";
 	clock();
+	//加载楼层1-9
+	var swiper3 = new swiper('#swiper3', {
+		loop: true,
+		autoplay: true,
+		speed: 800,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
+	//轮播图鼠标移入移除效果
+	$('.swiper-slide').mouseenter(function() {
+		swiper3.autoplay.stop();
+	});
+	$('.swiper-slide').mouseleave(function() {
+		swiper3.autoplay.start();
+	});
+	var swiper9 = new swiper('#swiper9', {
+		loop: true,
+		autoplay: true,
+		speed: 800,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
+	//轮播图鼠标移入移除效果
+	$('.swiper-slide').mouseenter(function() {
+		swiper9.autoplay.stop();
+	});
+	$('.swiper-slide').mouseleave(function() {
+		swiper9.autoplay.start();
+	});
+	var swiper6 = new swiper('#swiper6', {
+		loop: true,
+		autoplay: true,
+		speed: 800,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
+	//轮播图鼠标移入移除效果
+	$('.swiper-slide').mouseenter(function() {
+		swiper6.autoplay.stop();
+	});
+	$('.swiper-slide').mouseleave(function() {
+		swiper6.autoplay.start();
+	});
 });
