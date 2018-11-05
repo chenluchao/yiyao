@@ -8,7 +8,7 @@ requirejs.config({
 		lazy: "plugins/lazyload.min",
 		swiper: "plugins/swiper.min",
 		header: "modules/header",
-		footer:"modules/footer"
+		footer:"modules/footer",
 	},
 	shim: {
 		baiduT: {
@@ -36,7 +36,7 @@ requirejs.config({
 		//			}
 	}
 });
-requirejs(["jquery", "swiper", "baiduT", "header","footer","extend", "lazy", "page"], function($, swiper, baidu, header,footer) {
+requirejs(["jquery", "swiper", "baiduT", "header","footer","extend","lazy", "page"], function($, swiper, baidu, header,footer) {
 	//头部警告栏
 	$(".close_jing").click(function() {
 		$(".jinggao").animate({
@@ -44,6 +44,32 @@ requirejs(["jquery", "swiper", "baiduT", "header","footer","extend", "lazy", "pa
 		})
 	});
 	header.loadheader();
+	var ipt = document.querySelector(".search input[type=text]");
+	var but = document.querySelector(".search input[type=button]");
+	var ul = document.querySelector(".search ul");
+	
+	ipt.oninput=function(){
+			jsonp("https://suggest.taobao.com/sug",{
+				code:"utf-8",
+				q:ipt.value,
+				callback:"jsonp123",
+				area:"b2c"
+			},function(data){
+				ul.innerHTML = "";
+				data = data.result;
+				data.forEach(function(ele,index){
+					var li = document.createElement("li");
+					li.innerHTML = "<a href='https://s.taobao.com/search?q="+ele[0]+"' target='_blank'>"+ele[0]+"</a>";
+					ul.appendChild(li);
+				});
+			});
+			var url1='https://s.taobao.com/search?q='+ipt.value;
+			$(".search .go").click(function(){
+				$(this).attr({
+				href:url1
+			});
+			});
+	}
 	//	轮播图左侧导航栏
 	$(".fenlei").tab("active", "mouseenter");
 	$(".fenlei").mouseleave(function() {
@@ -126,7 +152,6 @@ requirejs(["jquery", "swiper", "baiduT", "header","footer","extend", "lazy", "pa
 			}
 		});
 	});
-
 	function clock() {
 		var se = document.querySelector(".clock-s");
 		var ho = document.querySelector(".clock-h");

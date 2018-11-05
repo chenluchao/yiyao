@@ -1,0 +1,430 @@
+.jinggao{
+width: 100%;
+height: 25px;
+background: #ffffc7;
+overflow: hidden;
+}
+.jinggao .jingbox{
+margin: 0 auto;
+width: 1195px;
+text-align: center;
+}
+.jinggao span:nth-child(1){
+color: #d60107;
+line-height: 25px;
+}
+.jinggao span:nth-child(1):hover{
+cursor: pointer;
+}
+.jinggao .jingbox span:nth-child(2){
+display: inline-block;
+width: 16px;
+height: 16px;
+line-height: 16px;
+margin-top: 5px;
+float: right;
+background: url(../images/index_close_jinggao.bmp) no-repeat;
+}
+.jinggao .jingbox span:nth-child(2):hover{
+cursor: pointer;
+}
+.jinggao span:hover{
+text-decoration: underline;
+}
+.head{
+width: 100%;
+height: 37px;
+margin: 0 auto;
+background: #f1f1f1;
+}
+.head .bigbox{
+margin: 0 auto;
+width: 1195px;
+}
+.head .box{
+width: 227px;
+margin: 0 auto;
+display: inline-block;
+font-size: 12px;
+position: relative;
+}
+.head .box .dizhi{
+position: absolute;
+background: white;
+border: 1px solid #f1f1f1;
+border-top: none;
+display: none;
+}
+.head .box .dizhi b{
+color: darkgray;
+}
+.head .box .dizhi i{
+color: #566262;
+margin-left: 6px;
+}
+.head .box .dizhi i:hover{
+text-decoration: underline;
+cursor: pointer;
+color: #2896D6;
+}
+.head .box span{
+color: #7d7d7d;
+display: inline-block;
+width: 41px;
+height: 37px;
+line-height: 36px;
+}
+.head .box span.ieam{
+font-weight: bold;
+}
+.head_a{
+display: inline-block;
+height: 37px;
+line-height: 37px;
+}
+.head_a a,.head_a span{
+display: inline-block;
+padding: 0 10px;
+color: #595b58;
+}
+.head_a a:hover,.head_a span:hover{
+text-decoration: underline;
+}
+.head_a span:nth-of-type(1){
+color: #c3ac80;
+cursor: pointer;
+font-weight: bold;
+}
+.head_a span:nth-of-type(2){
+background: url(../images/index_xuebi.png) -164px -100px;
+padding-left: 13px;
+}
+.head_a span:nth-of-type(2):hover,.head_a .blue:hover{
+color: #2896D6;
+cursor: pointer;
+}
+.head_a b{
+color: #dfdfdf;
+}
+.head_a a:nth-child(2){
+margin-left: -6px;
+}
+.head_a a:nth-child(1){
+color: #af5f60;
+}
+.bigbox .myyao{
+left: 853px;
+width: 75px;
+background: #fff;
+text-align: center;
+display: none;
+font-size: 12px;
+}
+.app_show{
+width: 207px;
+display: none;
+height: 111px;
+position: absolute;
+left: 1043px;
+background:#FFFFFF url(../images/index_xuebi.png) -80px -210px no-repeat;
+}
+.app_show p{
+padding-left: 98px;
+margin-top: 5px;
+}
+.app_show p:first-child{
+margin-top: 15px;
+}
+.app_show p:last-child{
+color: red;
+font-weight: bold;
+}
+.write:hover{
+background: #FFF;
+}
+.bigbox .myyao li{
+height: 24px;
+line-height: 24px;
+cursor: pointer;
+}
+.bigbox .myyao li:hover{
+background-color: #f1f1f1;
+}
+.page{
+width: 1195px;
+margin: 0 auto;
+}
+
+.head_img_box{
+width: 1195px;
+height: 60px;
+overflow: hidden;
+}
+.head_img img{
+width: 100%;
+height: 100%;
+}
+.head_serch_box{
+height: 130px;
+}
+.logo_box{
+width: 152px;
+height: 130px;
+float: left;
+overflow: hidden;
+}
+.logo_box img{
+margin: 25px 0 42px 34px;
+display: block;
+}
+.logo_box img:hover{
+cursor: pointer;
+}
+.search{
+width: 671px;
+height: 130px;
+float: left;
+position: relative;
+}
+.search ul{
+position: absolute;
+left: 131px;
+width: 449px;
+top: 81px;
+border: 1px solid #E8E8E8;
+z-index: 3;
+background: #ffffffff;
+}
+.search ul li{
+width: 100%;
+height: 25px;
+line-height: 25px;
+text-indent: 1em;
+}
+.search ul li:hover{
+background: #cfffffff;
+cursor: pointer;
+}
+.head_serch_box .search input[type=text]{
+width: 536px;
+height: 47px;
+font-size: 16px;
+text-indent: 1em;
+margin: 33px 0px 0 130px;
+outline: none;
+border: 1px solid #b9a898;
+}
+.head_serch_box .search input[type=button]{
+width: 85px;
+height: 47px;
+outline: none;
+border: none;
+border-left: 1px solid #b9a898;
+background-image: url(../images/search.jpg);
+position: absolute;
+right: 4px;
+bottom: 49px;
+cursor: pointer;
+}
+.head_serch_box .search p{
+margin-left: 136px;
+margin-top: 5px;
+}
+.head_serch_box .search p span{
+color: #a96660;
+}
+.head_serch_box .search p i{
+margin-left: 15px;
+color: #566262;
+}
+.head_serch_box .search p span:hover,.head_serch_box .search p i:hover{
+cursor: pointer;
+}
+.erwei_box{
+float: left;
+width: 372px;
+height: 130px;
+}
+.erwei_box .er_img{
+width: 101px;
+height: 89px;
+overflow: hidden;
+margin-top: 33px;
+margin-left: 107px;
+float: left;
+}
+.erwei_box .er_img img{
+width: 100%;
+height: 100%;
+}
+.buycar{
+width: 142px;
+height: 37px;
+float: right;
+margin-top: 38px;
+background: url(../images/index_xuebi.png) 0px -312px;
+border: 1px solid #DFDFDF;
+}
+.buycar span:first-child{
+margin-left: 45px;
+display: inline-block;
+margin-top: 11px;
+vertical-align: middle;
+}
+.buycar span:nth-of-type(2){
+display: inline-block;
+width: 16px;
+height: 16px;
+border-radius: 50%;
+background: red;
+color: #FFFFFF;
+text-align: center;
+font-weight: bold;
+margin-left: -65px;
+}
+.buycar i{
+background: url(../images/index_xuebi.png) -140px -108px;
+width: 16px;
+display: inline-block;
+height: 16px;
+margin-left: 50px;
+margin-top: 11px;
+vertical-align: middle;
+}
+#nav{
+width: 100%;
+overflow: hidden;
+margin: 0 auto;
+}
+/*headnav*/
+.headnav{
+width: 100%;
+height: 49px;
+margin: 0 auto;
+border-bottom: 2px solid #d2b994;
+}
+.nav{
+width: 1195px;
+height: 48px;
+margin: 0 auto;
+}
+.nav a{
+float: left;
+padding: 0 16px;
+height: 38px;
+line-height: 48px;
+cursor: pointer;
+font-size: 14px;
+}
+.nav a:first-child{
+padding: 0 0 0 14px;
+display: inline-block;
+width: 169px;
+height: 48px;
+color: #FFFFFF;
+font-weight: bold;
+background-color: #19323a;
+}
+.nav a:nth-of-type(3):hover,.nav a:nth-of-type(4):hover,.nav a:nth-of-type(7):hover,.nav a:nth-of-type(6):hover{
+color: #0083ce;
+}
+.nav a:nth-of-type(5),.nav a:nth-of-type(8){
+color: #e54948;
+}
+.nav a:nth-of-type(9){
+color: #864efe;
+padding: 0 35px;
+background: url(../images/index_haigou.jpg) 10px 14px no-repeat;
+}
+.nav a:first-child:hover{
+text-decoration: underline;
+}
+/*fenlei*/
+.fenlei{
+width: 1195px;
+margin: 0 auto;
+position: relative;
+}
+.fenlei ul{
+width: 182px;
+/*height: 400px;*/
+background: #314349;
+overflow: hidden;
+}
+.fenlei ul li{
+width: 152px;
+height: 40px;
+line-height: 40px;
+font-weight: 400;
+font-size: 14px;
+padding-left: 30px;
+color: #FFFFFF;
+}
+.fenlei .tab_but{
+float: left;
+}
+.fenlei .tab_show>div{
+width: 1010px;
+/*height: 400px;*/
+position: absolute;
+left: 182px;
+top: 0;
+background: #FFFFFF;
+float: left;
+display: none;
+overflow: hidden;
+}
+.fenlei .tab_but .active li{
+color: #314349;
+background: #FFFFFF;
+}
+.fenlei .tab_show .active{
+display: block;
+z-index: 2;
+}
+.one_4>div:first-of-type{
+border-bottom: 1px solid #e8e8e8;
+}
+.fenlei .tab_show>div>div:last-of-type{
+border-right: 1px solid #E8E8E8;
+}
+.fenlei .tab_show>div>div:last-of-type img{
+width: 252px;
+}
+.leftb{
+border-left: 1px solid #E8E8E8;
+box-sizing: border-box;
+}
+.fenlei .tab_show dl{
+margin-left: 20px;
+margin-top: 5px;
+}
+.fenlei .tab_show dl:nth-child(n+2){
+margin-top: 24px;
+}
+.fenlei .tab_show dl dt,.fenlei .tab_show dl dd{
+margin-top: 8px;
+}
+.fenlei .tab_show dl dt:hover,.fenlei .tab_show dl dd em:hover{
+text-decoration: underline;
+color: red;
+cursor: pointer;
+}
+.fenlei .tab_show dl dd em:nth-of-type(n+2){
+margin-left: 10px;
+}
+.fenlei .tab_show dl dt{
+color: #333333;
+font-weight: bold;
+}
+.fenlei .tab_show .red{
+color: red;
+}
+.fenlei .tab_show>div>div{
+width: 252px;
+height: 400px;
+float: left;
+}
+.fenlei .tab_show .one_4{
+border-left: 1px solid #e8e8e8;
+}
