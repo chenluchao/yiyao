@@ -56,7 +56,7 @@ margin: 0 auto;
 }
 .listcon .list_left{
 width: 184px;
-background: red;
+float: left;
 }
 .choose{
 width: 182px;
@@ -130,5 +130,343 @@ width: 184px;
 height: 100%;
 }
 .listcon .list_right{
+float: right;
+width: 1000px;
+box-sizing: border-box;
+}
+.title{
+position: relative;
+width: 100%;
+height: 50px;
+}
+.title p:first-child{
+line-height: 50px;
+position: absolute;
+top: 0;
+left: 0;
+color: #e54948;
+}
+.title span{
+display: inline-block;
+position: absolute;
+right: 20px;
+top: 0;
+line-height: 50px;
+}
+.title span i{
+color: #e54948;
+font-weight: bold;
+}
+.screen{
+color: #5E5E5E;
+border: 1px solid #dbdbdb;
+width: 998px;
+min-height: 176px;
+}
+.screen>div{
+height: auto;
+}
+.xianshi{
+width: 975px;
+height: 43px;
+margin-left: 13px;
+border-bottom: 1px solid #eeeeee;
+}
+.xianshi span:first-child{
+color: #333333;
+margin-left: 0px;
+}
+.xianshi span{
+display: inline-block;
+width: 80px;
+line-height: 43px;
+margin-left: 50px;
+vertical-align: middle;
+}
+.xianshi span:nth-of-type(n+2):hover{
+color: red;
+cursor: pointer;
+}
+.xianshi input{
+font-size: 12px;
+outline: none;
+width: 44px;
+height: 20px;
+line-height: 20px;
+padding-left: 12px;
+background: url(../images/list_xuebi.png) 0 -439px;
+border: none;
+float: right;
+margin-right: 50px;
+margin-top: 10px;
+}
+.xianshi input:hover{
+color: red;
+text-decoration: underline;
+cursor: pointer;
+background: url(../images/list_xuebi.png) -50px -439px;
+}
+.yinchang{
+width: 975px;
+margin-left: 13px;
+border-bottom: 1px solid #eeeeee;
+display: none;
+}
+.yinchang span{
+display: inline-block;
+width: 86px;
+margin-top: 12px;
+margin-left: 20px;
+}
+.yinchang span:first-child{
+color: #333333;
+margin-left: 0px;
+}
+.yinchang span:hover{
+color: red;
+cursor: pointer;
+}
+.yinchang span i{
+display: inline-block;
+width: 14px;
+vertical-align: middle;
+height: 14px;
+background: url(../images/list_xuebi.png) -60px -469px;
+}
+.yinchang span:hover i{
+background: url(../images/list_xuebi.png) -80px -469px;
+}
+.yinchang span.xuanz i{
+background: url(../images/list_xuebi.png) -100px -469px;
+}
+.yinchang p{
+text-align: center;
+margin-top: 30px;
+margin-bottom: 10px;
+}
+.yinchang p input{
+font-size: 12px;
+outline: none;
+border: 1px solid #dbdbdb;
+padding: 1px 3px;
+background: white;
+cursor: pointer;
+}
+.yinchang p input:nth-child(2){
+margin-left: 15px;
+}
+.yinchang .qd{
+color: #fff;
+background: #cbcbcb none;
+}
+.screen .qx{
+color: #5e5e5e;
+background: #fff none;
+}
+.screen .gaiqd p input.qd{
+color: white;
+background: #e54948 none;
+}
+.zhonghe{
+width: 1000px;
+height: 30px;
+border: 1px solid #dbdbdb;
+background: #F5F5F5;
+line-height: 30px;
+margin-top: 10px;
+}
+.zhonghe>span{
+display: inline-block;
+width: 44px;
+line-height: 30px;
+border-right: 1px solid #dbdbdb;
+text-align: center;
+cursor: pointer;
+}
+.zhonghe>span:hover{
+background: white;
+}
+.zhonghe p{
+padding: 0 4px;
+width: 86px;
+display: inline-block;
+line-height: 30px;
+border-right: 1px solid #dbdbdb;
+}
+.zhonghe p input{
+width: 34px;
+height: 18px;
+line-height: 30px;
+}
+.red{
+color: red !important;
+}
+.bold{
+font-weight: bold !important;
+}
+.zhonghe a{
+display: inline-block;
+width: 67px;
+line-height: 30px;
+border-right: 1px solid #dbdbdb;
+}
+.zhonghe a span{
+margin-left: 5px;
+vertical-align: middle;
+}
+.zhonghe a b{
+display: inline-block;
+width: 13px;
+height: 13px;
+background: url(../images/list_xuebi.png) -60px -469px;
+vertical-align: middle;
+margin-left: 5px;
+}
+.zhonghe a:hover b{
+background: url(../images/list_xuebi.png) -80px -469px;
+}
+.zhonghe a.xs b{
+background: url(../images/list_xuebi.png) -100px -469px;
+}
+/*列表内容*/
+.maincon{
+width: 1000px;
+min-height: 500px;
 
+margin-top: 10px;
+}
+#baidut ul{
+height: 1260px;
+}
+#baidut ul li{
+float: left;
+width: 234px;
+height: 420px;
+box-sizing: border-box;
+padding: 7px 14px 10px 14px;
+}
+.holder a,.holder span{
+float: left;
+width: 36px;
+height: 28px;
+line-height: 30px;
+text-align: center;
+color: #333;
+text-decoration: none;
+background: white;
+border: 1px solid #ddd;
+margin: 0 1px;
+margin-top: 20px;
+cursor: pointer;
+}
+.holder a:hover,.holder span:hover{
+border: 1px solid #0083ce;
+background: #0083ce;
+}
+.holder a:first-child{
+margin-left: 258px;
+}
+#baidut ul li p:nth-of-type(1) em{
+display: inline-block;
+width: 47px;
+height: 16px;
+border-radius: 1px;
+background: url(../images/1111.png);
+}
+#baidut ul li p:nth-of-type(2) i{
+display: inline-block;
+width: 32px;
+height: 18px;
+background: url(../images/list_self.png);
+}
+#baidut ul li p:nth-of-type(3) b{
+display: inline-block;
+width: 15px;
+height: 14px;
+background: url(../images/search_zan.png);
+}
+#baidut ul li p:nth-of-type(1){
+margin-top: 5px;
+height: 22px;
+line-height: 22px;
+}
+#baidut ul li p:nth-of-type(1) span{
+color: #f00;
+font-size: 16px;
+font-weight: bold;
+display: inline-block;
+height: 22px;
+line-height: 22px;
+float: left;
+}
+#baidut ul li p:nth-of-type(1) em{
+float: right;
+}
+#baidut ul li p:nth-of-type(2){
+height: 40px;
+margin-top: 5px;
+line-height: 20px;
+overflow: hidden;
+color: #333;
+}
+#baidut ul li p:nth-of-type(2) i{
+vertical-align: middle;
+margin-right: 5px;
+}
+#baidut ul li p:nth-of-type(3){
+margin-top: 5px;
+}
+#baidut ul li p:nth-of-type(3) b{
+vertical-align: middle;
+}
+#baidut ul li p:nth-of-type(3) span{
+vertical-align: middle;
+margin-left: 5px;
+}
+#baidut ul li p:nth-of-type(4){
+margin-top: 20px;
+}
+#baidut ul li p:nth-of-type(4) input{
+border: 1px solid #e5e5e5;
+outline: none;
+height: 25px;
+background: white;
+padding-left: 25px;
+padding-right: 10px;
+cursor: pointer;
+}
+#baidut ul li p:nth-of-type(4) input:first-child{
+color: #888888;
+background: url(../images/list_jing.png) no-repeat 10px;
+}
+#baidut ul li p:nth-of-type(4) input:first-child:hover{
+color: #ff6666;
+}
+#baidut ul li p:nth-of-type(4) input:last-child{
+color: #ff6666;
+border-left: none;
+background: url(../images/list_ermai.png) no-repeat 10px;
+}
+#baidut ul li:hover{
+border: 2px solid #EAEAEA;
+position: relative;
+z-index: 3;
+}
+#baidut ul li:hover p:nth-of-type(2){
+height: auto;
+}
+/*列表下方图片*/
+.zanwei{
+width: 100%;
+height: 1590px;
+}
+.bottom_img_box{
+width: 100%;
+height: 90px;
+margin-top: 30px;
+}
+.bottom_img{
+margin: 0 auto;
+width: 1195px;
+height: 90px;
 }

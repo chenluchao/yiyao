@@ -122,6 +122,7 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "extend", "lazy", "
 			})
 		})
 	});
+	//吸顶效果
 	window.onscroll=function(){
 		if($(window).scrollTop()>=275){
 			$(".xdbox").css({
@@ -137,5 +138,50 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "extend", "lazy", "
 	$(".choose dl dt i").click(function(){
 		$(this).parent().parent().toggleClass("active").siblings().removeClass("active");
 	});
-	
+//多选区域
+	//点击多选按钮展开多选框
+	$(".screen .xianshi input").click(function(){
+		$(this).parent().css({
+			display:"none"
+		});
+		$(this).parent().siblings().css({
+			display:"block"
+		});
+	});
+	//点击取消按钮收起多选框
+	$(".screen p input.qx").click(function(){
+		$(this).parent().siblings().removeClass("xuanz");
+		$(this).parent().parent().removeClass("gaiqd");
+		$(this).parent().parent().css({
+			display:"none"
+		});
+		$(this).parent().parent().siblings().css({
+			display:"block"
+		});
+	});
+	//进行多选
+	$(".screen .yinchang span:nth-of-type(n+2)").click(function(){
+		if($(this).hasClass("xuanz")){
+			$(this).removeClass("xuanz").parent().removeClass("gaiqd");
+		}else{
+			$(this).addClass("xuanz").parent().addClass("gaiqd")
+		}
+	});
+	//排序中的选择
+	$(".zhonghe a").click(function(){
+		$(this).toggleClass("xs");
+	});
+	//列表内容
+	$.get("data/list.json").done(function(data){
+			$("#baidut").html(baidu.template("temp",data));
+			$("#pages").jPages({
+				containerID:"container",
+				first:"首页",
+				last:"尾页",
+				previous:"上一页",
+				next:"下一页",
+				perPage:10
+			});
+		});
+		footer.loadfooter();
 });

@@ -188,6 +188,7 @@
 		</div>
 		<div class="listbox">
 			<div class="listcon">
+				<!--左侧展开收起效果-->
 				<div class="list_left">
 					<div class="choose">
 						<p>中西药品</p>
@@ -348,22 +349,158 @@
 					</div>
 					<div class="list_left_img">
 						<div class="img1">
-							<img src="//p3.maiyaole.com/img/item/1505298871116111.jpg"/>
+							<img src="//p3.maiyaole.com/img/item/1505298871116111.jpg" />
 						</div>
 						<div class="img1">
-							<img src="https://p1.maiyaole.com/img/item/1534905602163929.jpg"/>
+							<img src="https://p1.maiyaole.com/img/item/1534905602163929.jpg" />
 						</div>
 
 					</div>
 				</div>
+				<!--主列表区-->
 				<div class="list_right">
-					
+					<div class="title">
+						<p>中西医药</p>
+						<span>搜索结果(<i>201219</i>)</span>
+					</div>
+					<!--多选区域-->
+					<div class="screen">
+						<div>
+							<div class="xianshi">
+								<span>品牌:</span>
+								<span>宜多</span>
+								<span>李兆基</span>
+								<span>加蓓</span>
+								<span>长尔舒</span>
+								<span>安普索</span>
+								<input type="button" value="多选" />
+							</div>
+							<div class="yinchang">
+								<span>品牌:</span>
+								<span><i></i>宜多</span>
+								<span><i></i>李兆基</span>
+								<span><i></i>加蓓</span>
+								<span><i></i>长尔舒</span>
+								<span><i></i>安普索</span>
+								<p>
+									<input class="qd" type="button" value="确定" />
+									<input class="qx" type="button" value="取消" />
+								</p>
+							</div>
+						</div>
+						<div>
+							<div class="xianshi">
+								<span>是否进口:</span>
+								<span>国产</span>
+								<span>进口</span>
+								<input type="button" value="多选" />
+							</div>
+							<div class="yinchang">
+								<span>是否进口:</span>
+								<span><i></i>国产</span>
+								<span><i></i>进口</span>
+								<p>
+									<input class="qd" type="button" value="确定" />
+									<input class="qx" type="button" value="取消" />
+								</p>
+							</div>
+						</div>
+						<div>
+							<div class="xianshi">
+								<span>药品类型:</span>
+								<span>西药</span>
+								<span>中成药</span>
+								<input type="button" value="多选" />
+							</div>
+							<div class="yinchang">
+								<span>药品类型:</span>
+								<span><i></i>西药</span>
+								<span><i></i>中成药</span>
+								<p>
+									<input class="qd" type="button" value="确定" />
+									<input class="qx" type="button" value="取消" />
+								</p>
+							</div>
+						</div>
+						<div>
+							<div class="xianshi">
+								<span>剂型:</span>
+								<span>片剂</span>
+								<span>丸剂</span>
+								<span>胶囊</span>
+								<span>冲剂</span>
+								<span>口服液体制剂</span>
+								<input type="button" value="多选" />
+							</div>
+							<div class="yinchang">
+								<span>剂型:</span>
+								<span><i></i>片剂</span>
+								<span><i></i>丸剂</span>
+								<span><i></i>胶囊</span>
+								<span><i></i>冲剂</span>
+								<span><i></i>口服液体制剂</span>
+								<span><i></i>搽剂</span>
+								<span><i></i>洗剂</span>
+								<span><i></i>喷雾剂</span>
+								<p>
+									<input class="qd" type="button" value="确定" />
+									<input class="qx" type="button" value="取消" />
+								</p>
+							</div>
+						</div>
+					</div>
+					<!--中间排序-->
+					<div class="zhonghe">
+						<span>综合</span>
+						<span>销量</span>
+						<span>评论</span>
+						<span>人气</span>
+						<span>最新</span>
+						<span>价格</span>
+						<p>
+							<input type="text" name="" id="" placeholder="￥" />-
+							<input type="text" name="" id="" placeholder="￥" />
+						</p>
+						<a href="javascript:;"><b></b><span>包邮</span></a>
+						<a href="javascript:;"><b></b><span>自营</span></a>
+						<a href="javascript:;"><b></b><span>海外购</span></a>
+						<a class="red bold" href="javascript:;"><b></b><span>双11</span></a>
+					</div>
+					<!--列表内容-->
+					<div class="maincon">
+						<div id="baidut"></div>
+						<div id="pages" class="holder"></div>
+						<script id="temp" type="text/html">
+							<ul id="container">
+								<% for(var i=0; i<drug.length; i++){ %>
+								<li>
+									<img src="<%=drug[i].imgUrl%>" alt="">
+									<p><span><%=drug[i].onePrice%></span><em></em></p>
+									<p><i></i><%=drug[i].title%></p>
+									<p><b></b><span>1药网自营</span></p>
+									<p>
+										<input type="button" value="查看详情" />
+										<input type="button" value="资讯医生" />
+									</p>
+								</li>
+								<% } %>
+							</ul>
+						</script>
+					</div>
 				</div>
 			</div>
 		</div>
-
-
-
+		<div class="zanwei"></div>
+		<div class="bottom_img_box">
+			<div class="bottom_img">
+				<img src="https://p1.maiyaole.com/img/item/1533124283956233.jpg"/>
+			</div>
+		</div>
+		
+		<div class="loadfoot">
+			
+		</div>
 		<script type="text/javascript" src="js/libs/require.min.js" data-main="js/list.js"></script>
 	</body>
+
 </html>
