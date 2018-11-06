@@ -180,7 +180,7 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "extend", "lazy", "
 				last:"尾页",
 				previous:"上一页",
 				next:"下一页",
-				perPage:10
+				perPage:12
 			});
 		});
 		footer.loadfooter();
