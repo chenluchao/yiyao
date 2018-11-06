@@ -184,4 +184,9 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "extend", "lazy", "
 			});
 		});
 		footer.loadfooter();
+		$(".float_box #gotop").click(function(){
+			$('body,html').animate({
+				scrollTop:0
+			},1000);
+		});
 });

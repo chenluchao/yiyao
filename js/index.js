@@ -221,4 +221,9 @@ requirejs(["jquery", "swiper", "baiduT", "header","footer","extend","lazy", "pag
 	$(".friend .tab").tab("active", "mouseenter");
 	//加载尾部
 	footer.loadfooter();
+	$(".float_box #gotop").click(function(){
+			$('body,html').animate({
+				scrollTop:0
+			},1000);
+		});
 });
