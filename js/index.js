@@ -9,6 +9,7 @@ requirejs.config({
 		swiper: "plugins/swiper.min",
 		header: "modules/header",
 		footer:"modules/footer",
+		rightfixed:"modules/rightfixed"
 	},
 	shim: {
 		baiduT: {
@@ -36,7 +37,7 @@ requirejs.config({
 		//			}
 	}
 });
-requirejs(["jquery", "swiper", "baiduT", "header","footer","extend","lazy", "page"], function($, swiper, baidu, header,footer) {
+requirejs(["jquery", "swiper", "baiduT", "header","footer","rightfixed", "extend","lazy", "page"], function($, swiper, baidu, header,footer,rightfixed){
 	//头部警告栏
 	$(".close_jing").click(function() {
 		$(".jinggao").animate({
@@ -219,11 +220,8 @@ requirejs(["jquery", "swiper", "baiduT", "header","footer","extend","lazy", "pag
 	});
 	//友情链接选项卡
 	$(".friend .tab").tab("active", "mouseenter");
-	//加载尾部
+	//模块化加载尾部
 	footer.loadfooter();
-	$(".float_box #gotop").click(function(){
-			$('body,html').animate({
-				scrollTop:0
-			},1000);
-		});
+	//模块化加载右侧导航栏
+	rightfixed.loadrightfixed();
 });

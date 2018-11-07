@@ -1,0 +1,73 @@
+/*右侧导航栏*/
+.float_box{
+position: fixed;
+bottom: 10px;
+right: 23px;
+z-index: 100;
+width: 52px;
+border-left: 1px ;
+}
+.float_box>div{
+width: 52px;
+cursor: pointer;
+}
+.float_box>div:first-child{
+height: 58px;
+}
+.float_box>div:first-child img{
+width: 52px;
+height: 58px;
+}
+.float_box>div:nth-of-type(n+2){
+height: 52px;
+}
+.float_box>div:nth-of-type(2){
+position: relative;
+background: url(../images/index_xuebi.png) 0 -622px;
+}
+.float_box>div .zhe1{
+width: 50px;
+position: absolute;
+left: 0;
+top: 0;
+height: 52px;
+background: red;
+text-align: center;
+opacity: 0;
+font-size: 18px;
+font-weight: 400;
+color: white;
+padding-left: 2px;
+}
+.float_box>div:hover .zhe1{
+opacity: 1;
+}
+.float_box>div:nth-of-type(3){
+position: relative;
+background: url(../images/index_xuebi.png) -52px -726px;
+}
+.float_box>div:nth-of-type(4){
+position: relative;
+background: url(../images/index_xuebi.png) 0 -674px;
+}
+.float_box>div:nth-of-type(5){
+position: relative;
+background: url(../images/index_xuebi.png) 0 -778px;
+}
+.float_box>div:nth-of-type(6){
+position: relative;
+background: url(../images/index_xuebi.png) 0 -830px;
+}
+.float_box .dingw{
+position: absolute;
+display: inline-block;
+width: 16px;
+height: 16px;
+top: 8px;
+right: 10px;
+background: red;
+border-radius: 50%;
+color: white;
+text-align: center;
+font-weight: bold;
+}
