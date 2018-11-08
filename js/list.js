@@ -5,7 +5,6 @@ requirejs.config({
 		page: "plugins/jPages",
 		extend: "plugins/jquery.extend",
 		jquery: "libs/jquery.min",
-		lazy: "plugins/lazyload.min",
 		swiper: "plugins/swiper.min",
 		header: "modules/header",
 		footer: "modules/footer",
@@ -24,43 +23,15 @@ requirejs.config({
 		jquery: {
 			exports: "jQuery"
 		},
-		lazy: {
-			deps: ["jquery"]
-		},
 		swiper: {
 			exports: "Swiper",
 			deps: ["jquery"]
 		},
 	}
 });
-requirejs(["jquery", "swiper", "baiduT", "header", "footer","rightfixed", "extend", "lazy", "page"], function($, swiper, baidu, header, footer,rightfixed) {
+requirejs(["jquery", "swiper", "baiduT", "header", "footer","rightfixed", "extend", "page"], function($, swiper, baidu, header, footer,rightfixed) {
 	header.loadheader();
-	var ipt = document.querySelector(".search input[type=text]");
-	var but = document.querySelector(".search input[type=button]");
-	var ul = document.querySelector(".search ul");
-
-	ipt.oninput = function() {
-		jsonp("https://suggest.taobao.com/sug", {
-			code: "utf-8",
-			q: ipt.value,
-			callback: "jsonp123",
-			area: "b2c"
-		}, function(data) {
-			ul.innerHTML = "";
-			data = data.result;
-			data.forEach(function(ele, index) {
-				var li = document.createElement("li");
-				li.innerHTML = "<a href='https://s.taobao.com/search?q=" + ele[0] + "' target='_blank'>" + ele[0] + "</a>";
-				ul.appendChild(li);
-			});
-		});
-		var url1 = 'https://s.taobao.com/search?q=' + ipt.value;
-		$(".search .go").click(function() {
-			$(this).attr({
-				href: url1
-			});
-		});
-	}
+	//吸頂搜索框
 	var ipt1 = document.querySelector("#xdb input[type=text]");
 	var but1 = document.querySelector("#xdb input[type=button]");
 	var ul1 = document.querySelector("#xdb ul");

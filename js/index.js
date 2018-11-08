@@ -1,43 +1,27 @@
 requirejs.config({
 	baseUrl: "js",
 	paths: {
-		baiduT: "plugins/baiduTemplate",
-		page: "plugins/jPages",
 		extend: "plugins/jquery.extend",
 		jquery: "libs/jquery.min",
-		lazy: "plugins/lazyload.min",
 		swiper: "plugins/swiper.min",
 		header: "modules/header",
 		footer:"modules/footer",
 		rightfixed:"modules/rightfixed"
 	},
 	shim: {
-		baiduT: {
-			exports: "baidu"
-		},
-		page: {
-			deps: ["jquery"]
-		},
 		extend: {
 			deps: ["jquery"]
 		},
 		jquery: {
 			exports: "jQuery"
 		},
-		lazy: {
-			deps: ["jquery"]
-		},
 		swiper: {
 			exports: "Swiper",
 			deps: ["jquery"]
 		},
-		//			header:{
-		//				exports:"header",
-		//				deps:["jquery"]
-		//			}
 	}
 });
-requirejs(["jquery", "swiper", "baiduT", "header","footer","rightfixed", "extend","lazy", "page"], function($, swiper, baidu, header,footer,rightfixed){
+requirejs(["jquery", "swiper","header","footer","rightfixed", "extend"], function($, swiper, header,footer,rightfixed){
 	//头部警告栏
 	$(".close_jing").click(function() {
 		$(".jinggao").animate({
@@ -45,32 +29,6 @@ requirejs(["jquery", "swiper", "baiduT", "header","footer","rightfixed", "extend
 		})
 	});
 	header.loadheader();
-	var ipt = document.querySelector(".search input[type=text]");
-	var but = document.querySelector(".search input[type=button]");
-	var ul = document.querySelector(".search ul");
-	
-	ipt.oninput=function(){
-			jsonp("https://suggest.taobao.com/sug",{
-				code:"utf-8",
-				q:ipt.value,
-				callback:"jsonp123",
-				area:"b2c"
-			},function(data){
-				ul.innerHTML = "";
-				data = data.result;
-				data.forEach(function(ele,index){
-					var li = document.createElement("li");
-					li.innerHTML = "<a href='https://s.taobao.com/search?q="+ele[0]+"' target='_blank'>"+ele[0]+"</a>";
-					ul.appendChild(li);
-				});
-			});
-			var url1='https://s.taobao.com/search?q='+ipt.value;
-			$(".search .go").click(function(){
-				$(this).attr({
-				href:url1
-			});
-			});
-	}
 	//	轮播图左侧导航栏
 	$(".fenlei").tab("active", "mouseenter");
 	$(".fenlei").mouseleave(function() {

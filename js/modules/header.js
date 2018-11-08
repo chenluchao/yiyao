@@ -1,6 +1,6 @@
 define(['jquery'], function($) {
 	function loadheader() {
-		$(".head").load("html/header.html", function() {
+		$(".loadhead").load("html/header.html", function() {
 			//改变头部地址显示
 			$(".head .box .dizhi ul li i").click(function() {
 				$(".head .box .ieam").html(this.innerHTML)
@@ -9,8 +9,35 @@ define(['jquery'], function($) {
 				});
 			});
 			show();
-		});	
+			var ipt = document.querySelector(".search input[type=text]");
+			var but = document.querySelector(".search input[type=button]");
+			var ul = document.querySelector(".search ul");
+
+			ipt.oninput = function() {
+				jsonp("https://suggest.taobao.com/sug", {
+					code: "utf-8",
+					q: ipt.value,
+					callback: "jsonp123",
+					area: "b2c"
+				}, function(data) {
+					ul.innerHTML = "";
+					data = data.result;
+					data.forEach(function(ele, index) {
+						var li = document.createElement("li");
+						li.innerHTML = "<a href='https://s.taobao.com/search?q=" + ele[0] + "' target='_blank'>" + ele[0] + "</a>";
+						ul.appendChild(li);
+					});
+				});
+				var url1 = 'https://s.taobao.com/search?q=' + ipt.value;
+				$(".search .go").click(function() {
+					$(this).attr({
+						href: url1
+					});
+				});
+			}
+		});
 	}
+
 	function show() {
 		//头部地址二级菜单
 		var timer;
@@ -76,9 +103,9 @@ define(['jquery'], function($) {
 			}, 50)
 		}
 	}
-	
+
 	return {
 		loadheader: loadheader,
-		 
+
 	}
 });

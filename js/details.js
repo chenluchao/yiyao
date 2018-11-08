@@ -9,7 +9,7 @@ requirejs.config({
 		swiper: "plugins/swiper.min",
 		header: "modules/header",
 		footer: "modules/footer",
-		rightfixed:"modules/rightfixed"
+		rightfixed: "modules/rightfixed"
 	},
 	shim: {
 		baiduT: {
@@ -33,34 +33,8 @@ requirejs.config({
 		},
 	}
 });
-requirejs(["jquery", "swiper", "baiduT", "header", "footer","rightfixed", "extend", "lazy", "page"], function($, swiper, baidu, header, footer,rightfixed) {
+requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "extend", "lazy", "page"], function($, swiper, baidu, header, footer, rightfixed) {
 	header.loadheader();
-	var ipt = document.querySelector(".search input[type=text]");
-	var but = document.querySelector(".search input[type=button]");
-	var ul = document.querySelector(".search ul");
-
-	ipt.oninput = function() {
-		jsonp("https://suggest.taobao.com/sug", {
-			code: "utf-8",
-			q: ipt.value,
-			callback: "jsonp123",
-			area: "b2c"
-		}, function(data) {
-			ul.innerHTML = "";
-			data = data.result;
-			data.forEach(function(ele, index) {
-				var li = document.createElement("li");
-				li.innerHTML = "<a href='https://s.taobao.com/search?q=" + ele[0] + "' target='_blank'>" + ele[0] + "</a>";
-				ul.appendChild(li);
-			});
-		});
-		var url1 = 'https://s.taobao.com/search?q=' + ipt.value;
-		$(".search .go").click(function() {
-			$(this).attr({
-				href: url1
-			});
-		});
-	};
 	$(".fenlei").tab("active", "mouseenter");
 	$(".fenlei").mouseleave(function() {
 		$(".fenlei .tab_but a").removeClass("active");
@@ -100,15 +74,94 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer","rightfixed", "exten
 	//放大镜
 	$(function() {
 		var magnifierConfig = {
-			magnifier : "#magnifier1",//最外层的大容器
-			width : 300,//承载容器宽
-			height : 300,//承载容器高
-			moveWidth : null,//如果设置了移动盒子的宽度，则不计算缩放比例
-			zoom : 2//缩放比例
+			magnifier: "#magnifier1", //最外层的大容器
+			width: 300, //承载容器宽
+			height: 300, //承载容器高
+			moveWidth: null, //如果设置了移动盒子的宽度，则不计算缩放比例
+			zoom: 2 //缩放比例
 		};
 		var _magnifier = magnifier(magnifierConfig);
 	});
-	$(".tab").tab("active","click");
+	$(".tab").tab("active", "click");
+	//留言区
+	var current_btn = document.querySelector(".current_comm .comm_ipt .button button");
+		var current_ipt = document.querySelector(".current_comm .comm_ipt .input input");
+		var comm_list = document.querySelector(".comm_list");
+		current_btn.onclick=function(){
+			if(current_ipt.value.trim()){
+				createComm(current_ipt.value);
+			}else{
+				alert("请输入评论内容");
+			}
+			current_ipt.value = "";
+		}
+		function createComm(str){
+			var comm_item = document.createElement("div");
+			comm_item.className = "comm_item";
+			comm_list.appendChild(comm_item);
+			//custom_comm
+			var custom_comm = document.createElement("div");
+			custom_comm.className = "custom_comm";
+			comm_item.appendChild(custom_comm);
+			var custom_text = document.createElement("div");
+			custom_text.className = "custom_text";
+			custom_comm.appendChild(custom_text);
+			var custom_text_i = document.createElement("i");
+			custom_text_i.innerHTML = "评论";
+			custom_text.appendChild(custom_text_i);
+			var custom_text_mh = document.createTextNode("：");
+			custom_text.appendChild(custom_text_mh);
+			var custom_text_span = document.createElement("span");
+			custom_text_span.innerHTML = str;
+			custom_text.appendChild(custom_text_span);
+			var custiom_time = document.createElement("div");
+			custiom_time.className = "custiom_time";
+			custom_comm.appendChild(custiom_time);
+			var custiom_time_span = document.createElement("span");
+			var date = new Date();
+			custiom_time_span.innerHTML = add0(date.getMonth()+1)+"月"+add0(date.getDate())+"日 "+add0(date.getHours())+":"+add0(date.getMinutes());
+			custiom_time.appendChild(custiom_time_span);
+			var custiom_time_i = document.createElement("i");
+			custiom_time_i.innerHTML = "回复";
+			custiom_time.appendChild(custiom_time_i);
+			var repeat_ipt = document.createElement("div");
+			repeat_ipt.className = "repeat_ipt";
+			custom_comm.appendChild(repeat_ipt);
+			var repeat_ipt_input = document.createElement("div");
+			repeat_ipt_input.className = "input";
+			repeat_ipt.appendChild(repeat_ipt_input);
+			var repeat_ipt_input_input = document.createElement("input");
+			repeat_ipt_input_input.setAttribute("type","text");
+			repeat_ipt_input.appendChild(repeat_ipt_input_input);
+			var repeat_ipt_button = document.createElement("div");
+			repeat_ipt_button.className = "button";
+			repeat_ipt.appendChild(repeat_ipt_button);
+			var repeat_ipt_button_button = document.createElement("button");
+			repeat_ipt_button_button.innerHTML = "发表"
+			repeat_ipt_button.appendChild(repeat_ipt_button_button);
+
+			custiom_time_i.onclick=function(){
+				if(repeat_ipt.getAttribute("data-show")){
+					repeat_ipt.removeAttribute("data-show");
+				}else{
+					repeat_ipt.setAttribute("data-show","show");
+				}
+			}
+			repeat_ipt_button_button.onclick=function(){
+				if(repeat_ipt_input_input.value.trim()){
+					createComm(repeat_ipt_input_input.value);
+				}else{
+					alert("请输入提问内容");
+				}
+				repeat_ipt_input_input.value = "";
+				repeat_ipt.removeAttribute("data-show");
+			}
+
+		}
+		function add0(num){
+			if(num<10) return "0"+num;
+			return num; 
+		}
 	//模块化加载尾部
 	footer.loadfooter();
 	//模块化加载右侧导航栏

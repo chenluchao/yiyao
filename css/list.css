@@ -445,7 +445,7 @@ color: #ff6666;
 #baidut ul li p:nth-of-type(4) input:last-child{
 color: #ff6666;
 border-left: none;
-background: url(../images/list_ermai.png) no-repeat 10px;
+background: url(../images/list_cart.png) no-repeat 10px;
 }
 #baidut ul li:hover{
 border: 2px solid #EAEAEA;
