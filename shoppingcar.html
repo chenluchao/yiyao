@@ -137,7 +137,7 @@
 					<!--我的购物车-->
 					<div class="buycar active">
 						<div class="tou">
-							<div class="quanxuan"><span class="zhong gou"></span>全选</div>
+							<div class="quanxuan"><span class="zhong" id="quanx"></span>全选</div>
 							<div class="xinxi">商品信息</div>
 							<div class="jine">金额</div>
 							<div class="shuliang">数量</div>
@@ -147,25 +147,25 @@
 							<div class="caozuo">操作</div>
 						</div>
 						<div class="maincar">
-							<p><span class="zhong"></span>1药网</p>
+							<p>1药网商品清单</p>
 							<!--商品详情-->
 							<div class="buyshow">
 								<ul>
 									<li><span class="zhong"></span></li>
 									<li><img src="https://p3.maiyaole.com/img/201311/19/50_20131119111500200.jpg"/></li>
 									<li><span class="name">感冒颗粒</span><button>修改</button></li>
-									<li><span>￥<i>6.8</i></span></li>
+									<li><span>￥<i class="qian">6.8</i></span></li>
 									<li>
-										<input type="button" value="" />
-										<input type="text" value="1" />
-										<input type="button" value="" />
+										<input class="jian" type="button" value="" />
+										<input class="geshu" type="text" value="1" disabled="disabled"/>
+										<input class="jia" type="button" value="" />
 									</li>
-									<li><span>0.13Kg</span></li>
+									<li><span>0.13</span>Kg</li>
 									<li>有货</li>
-									<li><span>￥</span><i>6.80</i></li>
+									<li><span>￥<i>6.80</i></span></li>
 									<li>
 										<a href="javascript:;">收藏</a>
-										<a href="javascript:;">删除</a>
+										<a href="javascript:;" class="shanchu">删除</a>
 										<a href="javascript:;">找相似</a>
 									</li>
 								</ul>
@@ -173,37 +173,18 @@
 									<li><span class="zhong"></span></li>
 									<li><img src="https://p3.maiyaole.com/img/201311/19/50_20131119111500200.jpg"/></li>
 									<li><span class="name">感冒颗粒</span><button>修改</button></li>
-									<li><span>￥<i>6.8</i></span></li>
+									<li><span>￥<i class="qian">6.8</i></span></li>
 									<li>
-										<input type="button" value="" />
-										<input type="text" value="1" />
-										<input type="button" value="" />
+										<input class="jian" type="button" value="" />
+										<input class="geshu" type="text" value="1" disabled="disabled"/>
+										<input class="jia" type="button" value="" />
 									</li>
-									<li><span>0.13Kg</span></li>
+									<li><span>10.13</span>Kg</li>
 									<li>有货</li>
-									<li><span>￥</span><i>6.80</i></li>
+									<li><span>￥<i>6.80</i></span></li>
 									<li>
 										<a href="javascript:;">收藏</a>
-										<a href="javascript:;">删除</a>
-										<a href="javascript:;">找相似</a>
-									</li>
-								</ul>
-								<ul>
-									<li><span class="zhong"></span></li>
-									<li><img src="https://p3.maiyaole.com/img/201311/19/50_20131119111500200.jpg"/></li>
-									<li><span class="name">感冒颗粒</span><button>修改</button></li>
-									<li><span>￥<i>6.8</i></span></li>
-									<li>
-										<input type="button" value="" />
-										<input type="text" value="1" />
-										<input type="button" value="" />
-									</li>
-									<li><span>0.13Kg</span></li>
-									<li>有货</li>
-									<li><span>￥</span><i>6.80</i></li>
-									<li>
-										<a href="javascript:;">收藏</a>
-										<a href="javascript:;">删除</a>
+										<a href="javascript:;" class="shanchu">删除</a>
 										<a href="javascript:;">找相似</a>
 									</li>
 								</ul>
@@ -211,10 +192,10 @@
 							</div>
 							<div class="carfoot">
 								<ul>
-									<li>重量合计<span>0.00Kg</span></li>
-									<li>运费<span>&yen;0.00</span></li>
-									<li>优惠<span>&yen;0.00</span></li>
-									<li>商品金额<span>&yen;0.00</span></li>
+									<li>重量合计<span><i>0.00</i>Kg</span></li>
+									<li>运费<span>&yen;<i>0.00</i></span></li>
+									<li>优惠<span>&yen;<i>0.00</i></span></li>
+									<li>商品金额<span>&yen;<i>0.00</i></span></li>
 								</ul>
 							</div>
 						</div>
@@ -222,7 +203,7 @@
 						<div class="carfixedbox">
 							<div class="carfixed">
 								<ul>
-									<li><span class="zhong"></span><em>全选</em></li>
+									<li><span class="zhong" id="quanx"></span><em>全选</em></li>
 									<li>删除</li>
 									<li>清空购物车</li>
 								</ul>
