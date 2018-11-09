@@ -70,45 +70,59 @@ requirejs(["jquery","extend",], function($){
 		//我的购物车
 		//全选功能
 		$(".tab_show #quanx").click(function(){
+			//如果全选按钮没被激活则激活全部按钮
 			if(!($(this).hasClass("gou"))){
 				$(".tab_show #quanx").addClass("gou");
 				$(".maincar .zhong").addClass("gou");
 				$(".carfixed .zhong").addClass("gou");
-				//全选计算重量
+				//全选计算全部重量
+					//获取总重量按钮内的值
 				var zz =parseFloat($(".carfoot ul li:nth-of-type(1)").children().children().html());
+				//将所有的商品的价格全部遍历相加到总重量中
 				$(".buyshow ul li .gou").each(function(){
 					zz+=parseFloat($(this).parent().parent().children().eq(5).children().html())
 				});
+				//将计算完的总重量添加到显示区域
 				$(".carfoot ul li:nth-of-type(1)").children().children().html(Number(zz).toFixed(2));
+				$(".carfixed>p").children().eq(0).html(Number(zz).toFixed(2));
 				//全选价格
+					//获取总价钱按钮内的值
 				var zq =parseFloat($(".carfoot ul li:nth-of-type(4)").children().children().html());
+				//利用遍历将所有商品的价格和计算出来
 				$(".buyshow ul li .gou").each(function(){
 					zq+=parseFloat($(this).parent().parent().children().eq(7).children().children().html())
 				});
+				//将总价格添加到显示区域
 				$(".carfoot ul li:nth-of-type(4)").children().children().html(Number(zq).toFixed(2));
-				
+				$(".carfixed>p").children().eq(3).children().children().html(Number(zq).toFixed(2));
 			}else{
+				//如果全选按钮已经被激活则取消全部按钮全选状态
 				$(".tab_show #quanx").removeClass("gou");
 				$(".maincar .zhong").removeClass("gou");
 				$(".carfixed .zhong").removeClass("gou");
+				//将总价格和总价钱全部归零
 				$(".carfoot ul li:nth-of-type(1)").children().children().html("0.00");
 				$(".carfoot ul li:nth-of-type(4)").children().children().html("0.00");
+				$(".carfoot ul li:nth-of-type(4)").children().children().html("0.00");
+				$(".carfixed>p").children().eq(3).children().children().html("0.00");
 			}
 		});
 		//单个商品的选择
 		$(".maincar .zhong").click(function(){
 			if(!($(this).hasClass("gou"))){
 				$(this).addClass("gou");
-				//选中单个商品下方计算选中商品的重量和
+				//选中单个商品时计算下方要显示的所选中商品的重量和
 				var dz=parseFloat($(this).parent().parent().children().eq(5).children().html());
 				var zz=parseFloat($(".carfoot ul li:nth-of-type(1)").children().children().html());
 				zz+=dz;
 				$(".carfoot ul li:nth-of-type(1)").children().children().html(Number(zz).toFixed(2));
+				$(".carfixed>p").children().eq(0).html(Number(zz).toFixed(2));
 				//选中单个商品下方计算选中商品的价格和
 				var dq=parseFloat($(this).parent().parent().children().eq(7).children().children().html());
 				var zq=parseFloat($(".carfoot ul li:nth-of-type(4)").children().children().html());
 				zq+=dq;
 				$(".carfoot ul li:nth-of-type(4)").children().children().html(Number(zq).toFixed(2));
+				$(".carfixed>p").children().eq(3).children().children().html(Number(zq).toFixed(2));
 			}else{
 				$(this).removeClass("gou");
 				//计算去除某商品后的的总重量
@@ -116,11 +130,13 @@ requirejs(["jquery","extend",], function($){
 				var zz=parseFloat($(".carfoot ul li:nth-of-type(1)").children().children().html());
 				zz-=dz;
 				$(".carfoot ul li:nth-of-type(1)").children().children().html(Number(zz).toFixed(2));
+				$(".carfixed>p").children().eq(0).html(Number(zz).toFixed(2));
 				//计算去除某商品后的的总钱
 				var dq=parseFloat($(this).parent().parent().children().eq(7).children().children().html());
 				var zq=parseFloat($(".carfoot ul li:nth-of-type(4)").children().children().html());
 				zq-=dq;
 				$(".carfoot ul li:nth-of-type(4)").children().children().html(Number(zq).toFixed(2));
+				$(".carfixed>p").children().eq(3).children().children().html(Number(zq).toFixed(2));
 			}
 			if($(".buyshow .gou").length==$(".buyshow ul").length){
 				$(".tab_show .zhong").addClass("gou");
@@ -168,5 +184,26 @@ requirejs(["jquery","extend",], function($){
 		//删除
 		$(".buyshow ul li a.shanchu").click(function(){
 			$(this).parent().parent().remove();
-		})
+		});
+		//滚动距离小于某数值时下方固定区域
+		var top=$(".carfixed").offset().top;//如果将此放入onscroll内则发生颤抖现象
+		window.onscroll=function(){
+			//获取窗口高度
+			if (window.innerHeight){
+				winHeight = window.innerHeight;
+			}
+			else if ((document.body) && (document.body.clientHeight)){
+				winHeight = document.body.clientHeight;
+			}
+			if($(window).scrollTop()<=(top-winHeight)){
+				$(".carfixed").css({
+					position:"fixed",
+					bottom:"0"
+				});
+			}else{
+				$(".carfixed").css({
+					position:"relative",
+				});
+			};
+	};
 });

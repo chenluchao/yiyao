@@ -458,6 +458,7 @@ height: 60px;
 width: 980px;
 height: 60px;
 margin: 0 auto;
+background: white;
 border: 1px solid #e6e6e6;
 }
 .carfixed ul{
@@ -483,7 +484,6 @@ float: left;
 }
 .carfixed>p i:nth-of-type(1){
 margin-left: 10px;
-margin-right: 10px;
 }
 .carfixed>p span:nth-of-type(1){
 margin-left: 10px;
