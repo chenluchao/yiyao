@@ -53,6 +53,8 @@ background: url(../images/shoppingcar_headx.png) -268px -146px;
 }
 .dizhi{
 position: absolute;
+z-index: 5;
+background: white;
 left: 195px;
 display: none;
 border: 1px solid #e5e5e5;

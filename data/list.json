@@ -6,231 +6,278 @@
 		"itemId": "1",
 		"title": "泰勒宁 氨酚羟考酮片 5mg:325mg*10片【新旧包装更替中，请以门店配送实物为准】适用于各种原因引起的中、重度急、慢性疼痛。",
 		"imgUrl": "https://p1.maiyaole.com/img/item/201804/25/200_20180425120014135.jpg",
-		"onePrice":"55.0"
+		"onePrice":"52.0",
+		"kg":"0.06"
 	},{
 		"itemId": "2",
-		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
-		"imgUrl": "https://p3.maiyaole.com/img/item/201807/16/200_20180716171043505.jpg",
-		"onePrice":"172.0"
+		"title": "【到手价828元】东阿阿胶 阿胶 250g/盒",
+		"imgUrl": "https://p4.maiyaole.com/img/item/201710/27/200_20171027102551908.jpg",
+		"onePrice":"996.0",
+		"kg":"0.25"
 	},{
 		"itemId": "3",
-		"title": "金戈 枸橼酸西地那非片（伟哥） 50mg*20片 *2件",
-		"imgUrl": "https://p4.maiyaole.com/img/item/201808/07/200_20180807172006523.jpg",
-		"onePrice":"429.0"
+		"title": "希爱力 他达拉非片 5mg*28片",
+		"imgUrl": "https://p2.maiyaole.com/img/item/201611/09/200_20161109025448739.jpg",
+		"onePrice":"29.0",
+		"kg":"0.35"
 	},{
 		"itemId": "4",
-		"title": "希爱力 他达拉非片 5mg*28片【本品不参与用券】本品用于治疗男性勃起功能障碍",
-		"imgUrl": "https://p2.maiyaole.com/img/item/201611/09/200_20161109025448739.jpg",
-		"onePrice":"219.0"
+		"title": "顺尔宁 孟鲁司特钠咀嚼片 4mg*5片",
+		"imgUrl": "https://p4.maiyaole.com/img/item/201808/10/200_20180810100029283.jpg",
+		"onePrice":"28.5",
+		"kg":"0.04"
 	},{
 		"itemId": "5",
-		"title": "开浦兰 左乙拉西坦片 0.5g*30片",
-		"imgUrl": "https://p3.maiyaole.com/img/item/201609/17/200_20160917161045679.jpg",
-		"onePrice":"219.0"
+		"title": "金戈 枸橼酸西地那非片（伟哥） 50mg*20片",
+		"imgUrl": "https://p4.maiyaole.com/img/item/201808/07/200_20180807172006523.jpg",
+		"onePrice":"219.0",
+		"kg":"0.22"
 	},{
 		"itemId": "6",
-		"title": "曲莱/Trileptal 奥卡西平片 0.3g*50片",
-		"imgUrl": "https://p4.maiyaole.com/img/item/201804/17/200_20180417193600344.jpg",
-		"onePrice":"172.0"
-	},{
-		"itemId": "7",
-		"title": "顺尔宁 孟鲁司特钠咀嚼片 4mg*5片 *6件",
-		"imgUrl": "https://p2.maiyaole.com/img/item/201705/15/200_20170515115144306.jpg",
-		"onePrice":"28.5"
-	},{
-		"itemId": "8",
-		"title": "到手价828元】东阿阿胶 阿胶 250g/盒正宗东阿阿胶，专注气血问题，补血养血，滋阴润燥。用于血虚萎黄，眩晕心悸，心烦不眠，肺燥咳嗽。",
-		"imgUrl": "https://p4.maiyaole.com/img/item/201710/27/200_20171027102551908.jpg",
-		"onePrice":"996.0"
-	},{
-		"itemId": "9",
-		"title": "韦瑞德 富马酸替诺福韦二吡呋酯片 300mg*30片",
-		"imgUrl": "https://p3.maiyaole.com/img/item/201809/12/200_20180912142358583.jpg",
-		"onePrice":"478.0"
-	},{
-		"itemId": "10",
-		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
-		"imgUrl": "https://p1.maiyaole.com/img/item/201804/11/200_20180411184724281.jpg",
-		"onePrice":"56.0"
-	},{
-		"itemId": "11",
 		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
 		"imgUrl": "https://p3.maiyaole.com/img/item/201807/16/200_20180716171043505.jpg",
-		"onePrice":"172.0"
+		"onePrice":"172.0",
+		"kg":"0.09"
+	},{
+		"itemId": "7",
+		"title": "开浦兰 左乙拉西坦片 0.5g*30片",
+		"imgUrl": "https://p3.maiyaole.com/img/item/201609/17/200_20160917161045679.jpg",
+		"onePrice":"28.5",
+		"kg":"0.32"
+	},{
+		"itemId": "8",
+		"title": "曲莱/Trileptal 奥卡西平片 0.3g*50片",
+		"imgUrl": "https://p4.maiyaole.com/img/item/201804/17/200_20180417193600344.jpg",
+		"onePrice":"996.0",
+		"kg":"0.12"
+	},{
+		"itemId": "9",
+		"title": "拍下惊喜】同溢堂 益安宁丸 112丸*3瓶",
+		"imgUrl": "https://p4.maiyaole.com/img/item/201711/22/200_20171122181034312.jpg",
+		"onePrice":"478.0",
+		"kg":"0.12"
+	},{
+		"itemId": "10",
+		"title": "金戈 枸橼酸西地那非片（伟哥） 50mg*5片",
+		"imgUrl": "https://p4.maiyaole.com/img/item/201808/07/200_20180807171923888.jpg",
+		"onePrice":"156.0",
+		"kg":"0.14"
+	},{
+		"itemId": "11",
+		"title": "Henry/恒瑞 艾坦 甲磺酸阿帕替尼片 0.25g*10片",
+		"imgUrl": "https://p1.maiyaole.com/img/item/201810/15/200_20181015124100432.jpg",
+		"onePrice":"172.0",
+		"kg":"0.35"
 	},{
 		"itemId": "12",
 		"title": "金戈 枸橼酸西地那非片（伟哥） 50mg*20片 *2件",
-		"imgUrl": "https://p4.maiyaole.com/img/item/201808/07/200_20180807172006523.jpg",
-		"onePrice":"429.0"
+		"imgUrl": "https://p1.maiyaole.com/img/item/201810/15/200_20181015124100432.jpg",
+		"onePrice":"429.0",
+		"kg":"0.62"
 	},{
 		"itemId": "13",
 		"title": "希爱力 他达拉非片 5mg*28片【本品不参与用券】本品用于治疗男性勃起功能障碍",
 		"imgUrl": "https://p2.maiyaole.com/img/item/201611/09/200_20161109025448739.jpg",
-		"onePrice":null
+		"onePrice":"42.00",
+		"kg":"0.20"
+		
 	},{
 		"itemId": "14",
-		"title": "开浦兰 左乙拉西坦片 0.5g*30片",
-		"imgUrl": "https://p3.maiyaole.com/img/item/201609/17/200_20160917161045679.jpg",
-		"onePrice":"219.0"
+		"title": "必利劲 盐酸达泊西汀片 30mg*6片 *2件",
+		"imgUrl": "https://p3.maiyaole.com/img/item/201611/25/200_20161125140759496.jpg",
+		"onePrice":"219.0",
+		"kg":"0.17"
 	},{
 		"itemId": "15",
-		"title": "曲莱/Trileptal 奥卡西平片 0.3g*50片",
-		"imgUrl": "https://p4.maiyaole.com/img/item/201804/17/200_20180417193600344.jpg",
-		"onePrice":"172.0"
+		"title": "金戈 枸橼酸西地那非片 25mg*21片",
+		"imgUrl": "https://p2.maiyaole.com/img/item/201709/26/200_20170926140926805.jpg",
+		"onePrice":"172.0",
+		"kg":"0.19"
 	},{
 		"itemId": "16",
 		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
 		"imgUrl": "https://p3.maiyaole.com/img/item/201807/16/200_20180716171043505.jpg",
-		"onePrice":"172.0"
+		"onePrice":"172.0",
+		"kg":"0.42"
 	},{
 		"itemId": "17",
-		"title": "金戈 枸橼酸西地那非片（伟哥） 50mg*20片 *2件",
-		"imgUrl": "https://p4.maiyaole.com/img/item/201808/07/200_20180807172006523.jpg",
-		"onePrice":"429.0"
+		"title": "三九/999 感冒灵颗粒 10g*9袋",
+		"imgUrl": "https://p4.maiyaole.com/img/item/201808/10/200_20180810095613128.jpg",
+		"onePrice":"9.9",
+		"kg":"0.22"
 	},{
 		"itemId": "18",
 		"title": "希爱力 他达拉非片 5mg*28片【本品不参与用券】本品用于治疗男性勃起功能障碍",
 		"imgUrl": "https://p2.maiyaole.com/img/item/201611/09/200_20161109025448739.jpg",
-		"onePrice":null
+		"onePrice":"32.25",
+		"kg":"0.12"
 	},{
 		"itemId": "19",
-		"title": "到手价828元】东阿阿胶 阿胶 250g/盒正宗东阿阿胶，专注气血问题，补血养血，滋阴润燥。用于血虚萎黄，眩晕心悸，心烦不眠，肺燥咳嗽。",
-		"imgUrl": "https://p4.maiyaole.com/img/item/201710/27/200_20171027102551908.jpg",
-		"onePrice":"996.0"
+		"title": "【下单立减40元】汇仁 肾宝片 0.7g*126片 *1件+金戈 枸橼酸西地那非片（伟哥） 50mg*1片 *2件",
+		"imgUrl": "https://p1.maiyaole.com/img/item/201805/15/200_20180515105752224.jpg",
+		"onePrice":"996.0",
+		"kg":"0.82"
 	},{
 		"itemId": "20",
-		"title": "韦瑞德 富马酸替诺福韦二吡呋酯片 300mg*30片",
-		"imgUrl": "https://p3.maiyaole.com/img/item/201809/12/200_20180912142358583.jpg",
-		"onePrice":"478.0"
+		"title": "万艾可 枸橼酸西地那非片 50mg*10片",
+		"imgUrl": "https://p2.maiyaole.com/img/item/201806/08/200_20180608114652842.jpg",
+		"onePrice":"478.0",
+		"kg":"0.25"
 	},{
 		"itemId": "21",
-		"title": "到手价828元】东阿阿胶 阿胶 250g/盒正宗东阿阿胶，专注气血问题，补血养血，滋阴润燥。用于血虚萎黄，眩晕心悸，心烦不眠，肺燥咳嗽。",
-		"imgUrl": "https://p2.maiyaole.com/img/item/201806/26/200_20180626175218474.jpg",
-		"onePrice":"996.0"
+		"title": "舒利迭 沙美特罗替卡松粉吸入剂 50μg:250μg*60吸",
+		"imgUrl": "https://p4.maiyaole.com/img/item/201808/10/200_20180810095423827.jpg",
+		"onePrice":"996.0",
+		"kg":"0.18"
 	},{
 		"itemId": "22",
-		"title": "韦瑞德 富马酸替诺福韦二吡呋酯片 300mg*30片",
-		"imgUrl": "https://p3.maiyaole.com/img/50081/50081031/120_120.jpg?a=937475100",
-		"onePrice":"478.0"
+		"title": "必利劲 盐酸达泊西汀片 30mg*3片  *3件",
+		"imgUrl": "https://p1.maiyaole.com/img/item/201611/25/200_20161125112458187.jpg",
+		"onePrice":"478.0",
+		"kg":"0.62"
 	},{
 		"itemId": "23",
-		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
-		"imgUrl": "https://p4.maiyaole.com/img/item/201707/25/200_20170725134208356.jpg",
-		"onePrice":"56.0"
+		"title": "韦瑞德 富马酸替诺福韦二吡呋酯片 300mg*30片 *5件",
+		"imgUrl": "https://p3.maiyaole.com/img/item/201809/12/200_20180912142358583.jpg",
+		"onePrice":"56.0",
+		"kg":"0.57"
 	},{
 		"itemId": "24",
-		"title": "达芙文 阿达帕林凝胶 30g已少量到货，欲购从速",
-		"imgUrl": "https://p2.maiyaole.com/img/item/201804/11/200_20180411164119177.jpg",
-		"onePrice":"172.0"
+		"title": "保法止 非那雄胺片 1mg*28片",
+		"imgUrl": "https://p2.maiyaole.com/img/item/201705/23/200_20170523102502453.jpg",
+		"onePrice":"172.0",
+		"kg":"0.10"
 	},{
 		"itemId": "25",
-		"title": "韦瑞德 富马酸替诺福韦二吡呋酯片 300mg*30片",
-		"imgUrl": "https://p2.maiyaole.com/img/item/201701/19/200_20170119182806165.jpg",
-		"onePrice":"478.0"
+		"title": "优立通 非布司他片 40mg*14片",
+		"imgUrl": "https://p4.maiyaole.com/img/item/201808/07/200_20180807155120958.jpg",
+		"onePrice":"478.0",
+		"kg":"0.18"
 	},{
 		"itemId": "26",
-		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
-		"imgUrl": "https://p1.maiyaole.com/img/201508/08/120_20150808205125548.jpg",
-		"onePrice":"56.0"
+		"title": "纷乐 硫酸羟氯喹片 0.1g*14片",
+		"imgUrl": "https://p2.maiyaole.com/img/item/201808/29/200_20180829180328430.jpg",
+		"onePrice":"56.0",
+		"kg":"0.30"
 	},{
 		"itemId": "27",
-		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
-		"imgUrl": "https://p1.maiyaole.com/img/item/201807/19/200_20180719151032387.jpg",
-		"onePrice":"172.0"
+		"title": "捷诺维 磷酸西格列汀片 100mg*14片 糖尿病",
+		"imgUrl": "https://p3.maiyaole.com/img/item/201811/09/200_20181109185154224.jpg",
+		"onePrice":"172.0",
+		"kg":"0.72"
 	},{
 		"itemId": "28",
-		"title": "蔓迪 米诺地尔酊 90ml *2件",
-		"imgUrl": "https://p2.maiyaole.com/img/item/201809/29/200_20180929142204507.jpg",
-		"onePrice":"56.0"
+		"title": "艾迪莎 美沙拉秦缓释颗粒 0.5g*10袋【1药网自营】本品主治溃疡性结肠炎，用于溃疡性结肠炎的急性发作，防止复发。 急性期：4g/天（8袋） 缓解期：1.5g/天 （3袋）。 用于频繁发发病的克罗恩病病人，预防急性发作，缓解期：2g/天（4袋）",
+		"imgUrl": "https://p2.maiyaole.com/img/201512/07/120_20151207131428864.jpg?a=2111960464",
+		"onePrice":"56.0",
+		"kg":"0.34"
 	},{
 		"itemId": "29",
-		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
-		"imgUrl": "https://p3.maiyaole.com/img/item/201804/08/200_20180408191245822.jpg",
-		"onePrice":"172.0"
+		"title": "阿斯利康 信必可都保 布地奈德福莫特罗粉吸入剂 160μg:4.5μg*60吸",
+		"imgUrl": "https://p2.maiyaole.com/img/item/201612/08/200_2016120813201692.jpg",
+		"onePrice":"172.0",
+		"kg":"0.52"
 	},{
 		"itemId": "30",
-		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
-		"imgUrl": "https://p1.maiyaole.com/img/item/201804/11/200_20180411184724281.jpg",
-		"onePrice":"56.0"
+		"title": "星鲨 维生素D滴剂 400IU*30粒",
+		"imgUrl": "https://p3.maiyaole.com/img/item/201804/19/200_20180419173447834.jpg",
+		"onePrice":"56.0",
+		"kg":"0.11"
 	},{
 		"itemId": "31",
-		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
-		"imgUrl": "https://p3.maiyaole.com/img/item/201804/19/200_20180419173447834.jpg",
-		"onePrice":"172.0"
+		"title": "康王 复方酮康唑发用洗剂 100ml",
+		"imgUrl": "https://p3.maiyaole.com/img/item/201803/15/200_20180315102236838.jpg",
+		"onePrice":"42.0",
+		"kg":"0.13"
 	},{
 		"itemId": "32",
 		"title": "韦瑞德 富马酸替诺福韦二吡呋酯片 300mg*30片",
 		"imgUrl": "https://p3.maiyaole.com/img/item/201808/10/200_20180810095511400.jpg",
-		"onePrice":"478.0"
+		"onePrice":"478.0",
+		"kg":"0.15"
 	},{
 		"itemId": "33",
-		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
-		"imgUrl": "https://p3.maiyaole.com/img/item/201810/25/200_20181025184512223.jpg",
-		"onePrice":"56.0"
+		"title": "【到手价1650元】东阿阿胶 阿胶 500g/盒",
+		"imgUrl": "https://p1.maiyaole.com/img/item/201711/20/200_2017112010124366.jpg",
+		"onePrice":"1989.0",
+		"kg":"1.00"
 	},{
 		"itemId": "34",
 		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
 		"imgUrl": "https://p3.maiyaole.com/img/item/201803/15/200_20180315102236838.jpg",
-		"onePrice":"172.0"
+		"onePrice":"172.0",
+		"kg":"0.21"
 	},{
 		"itemId": "35",
 		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
 		"imgUrl": "https://p1.maiyaole.com/img/item/201804/11/200_20180411184724281.jpg",
-		"onePrice":"56.0"
+		"onePrice":"56.0",
+		"kg":"0.23"
 	},{
 		"itemId": "36",
 		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
 		"imgUrl": "https://p3.maiyaole.com/img/13127/13127129/120_120.jpg?a=213566069",
-		"onePrice":"172.0"
+		"onePrice":"172.0",
+		"kg":"0.31"
 	},{
 		"itemId": "37",
 		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
 		"imgUrl": "https://p2.maiyaole.com/img/item/201612/08/200_2016120813201692.jpg",
-		"onePrice":"172.0"
+		"onePrice":"172.0",
+		"kg":"0.35"
 	},{
 		"itemId": "38",
 		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
 		"imgUrl": "https://p3.maiyaole.com/img/item/201808/10/200_20180810155735836.jpg",
-		"onePrice":"56.0"
+		"onePrice":"56.0",
+		"kg":"0.37"
 	},{
 		"itemId": "39",
 		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
 		"imgUrl": "https://p2.maiyaole.com/img/201512/07/120_20151207131428864.jpg?a=2111960464",
-		"onePrice":"172.0"
+		"onePrice":"172.0",
+		"kg":"0.39"
 	},{
 		"itemId": "40",
 		"title": "韦瑞德 富马酸替诺福韦二吡呋酯片 300mg*30片",
 		"imgUrl": "https://p4.maiyaole.com/img/item/201808/10/200_20180810095423827.jpg",
-		"onePrice":"478.0"
+		"onePrice":"478.0",
+		"kg":"0.08"
 	},{
 		"itemId": "41",
 		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
 		"imgUrl": "https://p2.maiyaole.com/img/item/201806/08/200_20180608114652842.jpg",
-		"onePrice":"56.0"
+		"onePrice":"56.0",
+		"kg":"0.60"
 	},{
 		"itemId": "42",
 		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
 		"imgUrl": "https://p1.maiyaole.com/img/item/201805/15/200_20180515105752224.jpg",
-		"onePrice":"172.0"
+		"onePrice":"172.0",
+		"kg":"0.22"
 	},{
 		"itemId": "43",
 		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
 		"imgUrl": "https://p3.maiyaole.com/img/item/201709/27/200_20170927112411461.jpg",
-		"onePrice":"56.0"
+		"onePrice":"56.0",
+		"kg":"0.50"
 	},{
 		"itemId": "44",
 		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
 		"imgUrl": "https://p4.maiyaole.com/img/item/201808/10/200_20180810095613128.jpg",
-		"onePrice":"172.0"
+		"onePrice":"172.0",
+		"kg":"0.52"
 	},{
 		"itemId": "45",
 		"title": "立普妥/Lipitor 阿托伐他汀钙片 20mg*7片",
 		"imgUrl": "https://p1.maiyaole.com/img/item/201810/15/200_20181015124100432.jpg",
-		"onePrice":"56.0"
+		"onePrice":"56.0",
+		"kg":"0.36"
 	},{
 		"itemId": "46",
 		"title": "BARACLUDE/博路定 恩替卡韦片 0.5mg*7片",
 		"imgUrl": "https://p4.maiyaole.com/img/item/201808/07/200_20180807171923888.jpg",
-		"onePrice":"172.0"
+		"onePrice":"172.0",
+		"kg":"0.27"
 	}
 ]}

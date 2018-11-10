@@ -88,6 +88,10 @@ text-indent: 10px;
 background: #f5f5f5;
 cursor: pointer;
 }
+.choose dl dt:hover{
+color: #E54948;
+text-decoration: underline;
+}
 .choose dl dt i{
 display: inline-block;
 width: 15px;

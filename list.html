@@ -431,7 +431,7 @@
 						<div id="baidut"></div>
 						<div id="pages" class="holder"></div>
 						<script id="temp" type="text/html">
-							<ul id="container">
+							<ul id="container" class="container">
 								<% for(var i=0; i<drug.length; i++){ %>
 								<li>
 									<img src="<%=drug[i].imgUrl%>" alt="">
@@ -439,7 +439,7 @@
 									<p><i></i><%=drug[i].title%></p>
 									<p><b></b><span>1药网自营</span></p>
 									<p>
-										<input type="button" value="查看详情" />
+										<a href="details.html" target="_blank"><input type="button" value="查看详情" /></a>
 										<input type="button" value="加入购物车" />
 									</p>
 								</li>

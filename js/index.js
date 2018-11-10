@@ -6,7 +6,8 @@ requirejs.config({
 		swiper: "plugins/swiper.min",
 		header: "modules/header",
 		footer:"modules/footer",
-		rightfixed:"modules/rightfixed"
+		rightfixed:"modules/rightfixed",
+		cookie:"plugins/cookie"
 	},
 	shim: {
 		extend: {
@@ -21,7 +22,7 @@ requirejs.config({
 		},
 	}
 });
-requirejs(["jquery", "swiper","header","footer","rightfixed", "extend"], function($, swiper, header,footer,rightfixed){
+requirejs(["jquery", "swiper","header","footer","rightfixed", "extend","cookie"], function($, swiper, header,footer,rightfixed){
 	//头部警告栏
 	$(".close_jing").click(function() {
 		$(".jinggao").animate({
