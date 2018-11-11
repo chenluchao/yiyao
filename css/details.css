@@ -76,6 +76,7 @@ float: left;
 margin-left: 20px;
 width: 465px;
 height: 331px;
+position: relative;
 }
 .xqmid .mid1{
 width: 100%;
@@ -90,7 +91,7 @@ border: 1px solid #0193e8;
 font-weight: normal;
 color: #0193e8;
 }
-.xqmid p{
+.xqmid>p{
 margin-top: 10px;
 }
 .xqmid p:nth-of-type(2){
@@ -111,25 +112,75 @@ margin-left: 15px;
 .xqmid p:nth-of-type(4) span{
 margin-left: 10px;
 }
+.xqmid .number{
+padding-left: 10px;
+position: relative;
+}
+.xqmid .number input{
+width: 85px;
+height: 40px;
+outline: none;
+background: white;
+border: 1px solid #e6e6e6;
+}
+.xqmid .number i{
+display: inline-block;
+cursor: pointer;
+width: 19px;
+height: 19px;
+position: absolute;
+left: 133px;
+top: 2px;
+background: url(../images/icon_detail.png) -131px -842px;
+}
+.xqmid .number i:nth-of-type(2){
+position: absolute;
+left: 133px;
+top: 22px;
+background: url(../images/icon_detail.png) -131px -863px;
+}
 .xqmid>span{
 display: inline-block;
-width: 170px;
-height: 55px;
-background: #FF9E81;
-font-size: 16px;
+width: 240px;
+height: 53px;
+font-size: 18px;
 line-height: 55px;
 color: #fff;
-text-align: center;
 cursor: pointer;
-margin-top: 20px;
+text-align: center;
+padding-left: 30px;
+background: #e72418 url(../images/icon_detail.png) 50px -760px no-repeat;
+margin-top: 11px;
+border: 0 solid #9a0900;
+border-bottom: 3px solid #9a0900;
+box-sizing: border-box;
 }
-.xqmid>h5{
+.xqmid>span:hover{
+border: none;
+background: #D80000 url(../images/icon_detail.png) 50px -760px no-repeat;
+}
+.xqmid .mabao{
+width: 242px;
+height: 30px;
+background: #f8f8f8;
+line-height: 30px;
 border: 1px solid #e6e6e6;
-width: 100%;
-height: 39px;
-font-size: 12px;
-line-height: 39px;
-margin-top: 20px;
+padding-left: 5px;
+}
+.xqmid .mabao i{
+display: inline-block;
+width: 15px;
+height: 19px;
+vertical-align: middle;
+background: url(../images/mobPrice.png);
+}
+.xqmid .mabao b{
+color: #e72418;
+font-weight: normal;
+cursor: pointer;
+}
+.xqmid .mabao b:hover{
+text-decoration: underline;
 }
 .xqmid>h6{
 font-size: 12px;
@@ -149,6 +200,144 @@ background: url(../images/icon_detail.png) 0 -1142px;
 }
 .xqmid>h6 i:nth-of-type(n+2){
 margin-left: 10px;
+}
+.xqmid .mama{
+width: 150px;
+height: 150px;
+background: white;
+position: absolute;
+z-index: 30;
+left: 70px;
+top: 30px;
+box-shadow: 1px 2px 2px #e6e6e6;
+border: 1px solid #e6e6e6;
+padding: 4px;
+display: none;
+}
+.xqmid .mama:before{
+content: '';
+display: block;
+width: 0;
+height: 0;
+border-top: 6px solid #e6e6e6;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-bottom: 0;
+left: 87px;
+top: 159px;
+position: absolute;
+}
+.xqmid .mama:after{
+content: '';
+display: block;
+width: 0;
+height: 0;
+border-top: 6px solid #fff;
+border-left: 6px solid #e6e6e6;
+border-right: 6px solid #e6e6e6;
+border-bottom: 0;
+left: 86px;
+top: 156px;
+position: absolute;
+}
+/*添加成功显示弹窗*/
+.succes{
+width: 498px;
+height: 182px;
+position: absolute;
+top: 27px;
+left: -92px;
+display: none;
+z-index: 99;
+}
+.succes>p{
+height: 35px;
+line-height: 35px;
+text-indent: 2em;
+font-size: 14px;
+color: #fff;
+font-weight: bold;
+background: #0083ce;
+}
+.succes>p>i{
+display: inline-block;
+width: 30px;
+height: 35px;
+float: right;
+margin-right: 10px;
+cursor: pointer;
+background: url(//s.maiyaole.com/images/product/icon_detail.png) no-repeat 5px -383px;;
+}
+.succes .sucon{
+width: 498px;
+height: 147px;
+background: white;
+overflow: hidden;
+border: 1px solid #0083ce;
+box-sizing: border-box;
+}
+.succes .sucon>p{
+float: left;
+}
+.succes .sucon>p:nth-of-type(n+2){
+width: 300px;
+margin-left: 25px;
+color: #666;
+margin-top: 5px;
+}
+.succes .sucon>p:nth-of-type(2){
+margin-top: 20px;
+}
+.succes .sucon>p:nth-of-type(3) span{
+font-size: 14px;
+color: #c00;
+font-weight: bold;
+}
+.succes .sucon .an{
+width: 308px;
+height: 44px;
+margin-top: 20px !important;
+}
+.succes .sucon .an a input{
+width: 116px;
+height: 36px;
+border: 0;
+font-weight: bold;
+cursor: pointer;
+}
+.succes .sucon .an a:nth-of-type(1) input{
+background: #E71A0F;
+color: white;
+border-bottom: 2px solid #a00;
+box-sizing: border-box;
+}
+.succes .sucon .an a:nth-of-type(1) input:hover{
+border: none;
+background: #D80000;
+}
+.succes .sucon .an a:nth-of-type(2) input{
+background: white;
+color: #e71a0f;
+border: 1px solid #e71a0f;
+margin-left: 10px;
+}
+.succes .sucon .an a:nth-of-type(2) input:hover{
+background: #e71a0f;
+color: #fff;
+}
+.succes .sucon>p:nth-of-type(1){
+width: 115px;
+height: 145px;
+overflow: hidden;
+margin-left: 20px;
+float: left;
+}
+.succes .sucon>p img{
+width: 115px;
+height: 115px;
+display: block;
+border: none;
+margin-top: 20px;
 }
 /*详情右侧*/
 .xqr{

@@ -50,7 +50,55 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 			"margin-left": 0
 		});
 	});
-	//三级列表
+	//点击添加减少商品数目
+	$(".number i").eq(0).click(function(){
+		var add = $(".number input").val();
+		add++;
+		$(".number input").val(add);
+	});
+	$(".number i").eq(1).click(function(){
+		var add = $(".number input").val();
+		if(add<=1){
+			$(".number input").val("1");
+		}else{
+			add--;
+			$(".number input").val(add);
+		}
+	});
+	//立即扫码效果实现
+	$(".mabao b").hover(function(){
+		$(".xqmid .mama").css({
+			display:"block"
+		}).stop().animate({
+			top:65
+		},600)
+	},function(){
+		$(".xqmid .mama").stop().animate({
+			top:30
+		},500);
+		setTimeout(function(){
+			$(".xqmid .mama").css({
+				display:"none"
+			})
+		},600)
+	});
+	$(".xqmid .addcar").click(function(){
+		$(".xqmid .succes").css({
+			display:"block"
+		});
+		var addnum=$(".xqmid .number input").val();
+		$(".xqmid .succes .addnum span").html(addnum);
+		
+		var allmon=parseInt($(".xqmid .number input").val())*parseFloat($(".xqmid p:nth-of-type(4) i b").html())
+		$(".xqmid .succes .allmon span i").html(allmon);
+	});
+	$(".xqmid .succes .close").click(function(){
+		$(".xqmid .succes").css({
+			display:"none"
+		})
+	});
+	
+//三级列表
 	$(".fenlei .tab_show").load("html/details_erji_show.html", function() {
 		var timer2;
 		$(".headnav .nav a:first-child").hover(function() {
