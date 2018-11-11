@@ -89,7 +89,7 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 		var addnum=$(".xqmid .number input").val();
 		$(".xqmid .succes .addnum span").html(addnum);
 		
-		var allmon=parseInt($(".xqmid .number input").val())*parseFloat($(".xqmid p:nth-of-type(4) i b").html())
+		var allmon=(parseFloat($(".xqmid .number input").val()).toFixed(2))*(parseFloat($(".xqmid p:nth-of-type(4) i b").html()).toFixed(2))
 		$(".xqmid .succes .allmon span i").html(allmon);
 	});
 	$(".xqmid .succes .close").click(function(){
@@ -208,7 +208,6 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 		}
 
 	}
-
 	function add0(num) {
 		if(num < 10) return "0" + num;
 		return num;
@@ -217,30 +216,5 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 	footer.loadfooter();
 	//模块化加载右侧导航栏
 	rightfixed.loadrightfixed();
-	//点击加入购物车改变cookie值
-	window.onload = function() {
-		$.get("data/list.json").done(function() {
-			$(".xqmid").children().eq(4).click(function() {
-				var car = getCookie("car");
-				if(!car) {
-					setCookie("car", this.index + "|1", 7);
-				}else{
-					if(!findRepeat(this.index)) {
-						setCookie("car", car + "&" + this.index + "|1", 7);
-					} else {
-						var carpros = car.split("&");
-						for(var i = 0; i < carpros.length; i++) {
-							var pro = carpros[i].split("|");
-							if(this.index == pro[0]) {
-								pro[1]++;
-								carpros.splice(i, 1, pro.join("|"));
-							}
-						}
-						setCookie("car", carpros.join("&"), 7)
-					}
-				}
-			});
-		});
-
-	}
+	
 });

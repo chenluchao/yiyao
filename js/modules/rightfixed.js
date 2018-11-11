@@ -6,6 +6,45 @@ define(['jquery'], function(rightfixed) {
 					scrollTop: 0
 				}, 1000);
 			});
+			//购物车显示商品详情
+			var timer;
+			var oD1 = document.querySelector(".carfa .zhe1");
+			var oD2 = document.querySelector(".carfa .carshow");
+			oD2.onmousemove = oD1.onmouseover = function() {
+				clearTimeout(timer);
+				oD2.style.display = 'block';
+			}
+			oD1.onmouseout = function() {
+				timer = setTimeout(function() {
+					oD2.style.display = "none";
+				}, 30)
+			}
+			oD2.onmouseout = function() {
+				timer = setTimeout(function() {
+					oD2.style.display = "none"
+				}, 30)
+			};
+			$.get("data/list.json").done(function(data) {
+				var ul = document.querySelector(".carfa .carshow ul");
+				var apro = getCookie("car").split("&");
+				for(var i = 0; i < apro.length; i++) {
+					var pro = apro[i].split("|");
+					var info = find(data.drug, pro[0]);
+					var li = document.createElement("li");
+					var p = document.createElement("p");
+					p.innerHTML = "<img src='" + info.imgUrl + "' />";
+					li.appendChild(p);
+					var span = document.createElement("span");
+					span.innerHTML = "￥<i>" + info.onePrice + "</i>";
+					li.appendChild(span);
+					var span1 = document.createElement("span");
+					span1.innerHTML = info.title;
+					li.appendChild(span1);
+					ul.appendChild(li);
+				}
+				var n = $(".carfa .carshow ul").children().length;
+				$(".carfa .dingw").html(n);
+			});
 		});
 	};
 	return {

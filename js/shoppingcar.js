@@ -85,7 +85,7 @@ requirejs(["jquery", "extend", "cookie"], function($) {
 			li1.innerHTML = "<img src='"+info.imgUrl+"' />"
 			ul.appendChild(li1);
 			var li2 = document.createElement("li");
-			li2.innerHTML = "<span class='name'>" + info.title + "</span><button>修改<button>";
+			li2.innerHTML = "<span class='name'>" +info.title+"</span><button>修改<button>";
 			ul.appendChild(li2);
 			var li3 = document.createElement("li");
 			li3.innerHTML = "<span>&yen<i class='qian'>" + info.onePrice + "</i></span>";
