@@ -1,0 +1,140 @@
+/*头部*/
+.log_head{
+width: 100%;
+}
+.log_head_con{
+width: 990px;
+margin:  0 auto;
+height: 98px;
+overflow: hidden;
+}
+/*登录主要内容*/
+.log_main{
+width: 100%;
+}
+.log_main_con{
+width: 990px;
+margin: 0 auto;
+min-height: 335px;
+border: #e6e6e6 1px solid;
+border-top: #0083ce 2px solid;
+color: #5e5e5e;
+padding-top: 8px;
+background: #fff url(https://s.maiyaole.com/images/passport/l_bg_02.png) no-repeat left top;
+box-shadow: -1px 1px 10px #EFEFEF, -1px 10px 10px #EFEFEF;
+overflow: hidden;
+}
+.log_form{
+width: 430px;
+min-height: 335px;
+margin-left: 560px;
+}
+.tab{
+position: relative;
+}
+.tab_btn{
+width: 428px;
+height: 46px;
+border-bottom: 1px solid #e2e2e2;
+}
+.tab_btn>div:nth-of-type(1){
+width: 154px;
+height: 46px;
+float: left;
+margin-left: 36px;
+box-sizing: border-box;
+}
+.tab_btn>div:nth-of-type(2){
+width: 154px;
+height: 46px;
+float: left;
+margin-left: 60px;
+box-sizing: border-box;
+}
+.tab_btn>div p{
+width: 180px;
+height: 25px;
+line-height: 25px;
+color: #333;
+font-size: 14px;
+margin-top: 10px;
+cursor: pointer;
+}
+.tab_btn>div:nth-of-type(1) p{
+text-indent: 43px;
+border-right: 1px solid #e2e2e2;
+}
+.tab_btn>div:nth-of-type(2) p{
+text-indent: 35px;
+}
+.tab_btn>div.active{
+border-bottom: #0083ce 2px solid;
+}
+.tab_btn>div p:hover{
+color: #0083ce;
+}
+.tab_btn>div:nth-of-type(1) p{
+border-right: 1px solid #e2e2e2;
+}
+.tab_show{
+position: relative;
+min-height: 400px;
+}
+.tab_show>div{
+width: 398px;
+min-height: 387px;
+position: absolute;
+left: 0;
+top: 0;
+display: none;
+}
+.tab_show>div.active{
+display: block;
+}
+/*普通登录*/
+#pt{
+padding-left: 30px;
+}
+#pt h2{
+width: 380px;
+height: 21px;
+font-size: 16px;
+margin: 13px 0;;
+}
+#pt h2 span{
+font-size: 12px;
+float: right;
+margin-top: 2px;
+}
+#pt h2 span a{
+color: #0083ce;
+}
+#pt h2 span a:hover{
+text-decoration: underline;
+}
+/*快速登录*/
+#ks{
+min-height: 315px;
+padding-left: 30px;
+}
+/*尾部*/
+.log_foot{
+width: 100%;
+}
+.log_foot_con{
+width: 990px;
+height: 65px;
+text-align: center;
+margin: 50px auto 20px auto;
+}
+.log_foot_con p{
+margin-top: 10px;
+}
+.log_foot_con p a{
+color: #666;
+margin: 0 8px;
+}
+.log_foot_con p a:hover{
+text-decoration: underline;
+color: #0083ce;
+}

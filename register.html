@@ -3,8 +3,115 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<title>注册1药网</title>
+		<link rel="shortcut icon" href="images/title_logo.ico" /> 
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
 	</head>
 	<body>
-		注册
+		<div class="reg_head">
+			<div class="reg_head_con">
+				<a href="index.html"><img src="https://s.maiyaole.com/images/passport/yao_logo.png"/></a>
+			</div>
+		</div>
+		<div class="reg_main">
+			<div class="reg_main_con">
+				<h2 class="reg_title">
+					Hi，欢迎注册！
+					<span>我已经注册，现在就<a href="login.html">登录</a></span>
+				</h2>
+				<div class="reg_form">
+					<form action="" method="post">
+						<div class="tel">
+							<div class="telshow">
+								<i></i>
+								<input name="uname" class="dianhua" type="tel" pattern="[0-9]{11}" placeholder="手机号" required="required" />
+								<span>不能为空<i></i></span>
+								<b class="ok"></b>
+							</div>
+							<div class="telerror">
+								手机号格式不正确
+							</div>
+						</div>
+						<div class="tel">
+							<div class="telshow">
+								<i class="mima"></i>
+								<input name="" class="mi" type="password" placeholder="登录密码" required="required" />
+								<span>不能为空<i></i></span>
+								<b class="ok"></b>
+							</div>
+							<div class="telerror">
+								密码不能全为字母或数字，请包含两中字符以上
+							</div>
+							<div class="xti">
+								6-20位字符，建议由字母、数字和符号两种以上组合
+							</div>
+							<div class="yti">
+								密码只能为6-20位字符
+							</div>
+						</div>
+						<div class="tel">
+							<div class="telshow">
+								<i class="mima"></i>
+								<input class="qmi" type="password" placeholder="确认密码" required="required" />
+								<span>不能为空<i></i></span>
+								<b class="ok"></b>
+							</div>
+							<div class="exti">
+								请再次输入登录密码
+							</div>
+							<div class="eyti">
+								密码不一致
+							</div>
+						</div>
+						
+						<div class="toux">
+							<a href="javascript:;"><input name="" type="file" required="required" name="" id="" />上传头像</a>
+						</div>
+						<div class="agree">
+							<p>
+								<input type="checkbox" name="agree" id="agree" required="required"/>
+								<span>我已阅读并同意<a href="javascript:;">《1药网服务协议》</a></span>
+								<i>请勾选1药网服务协议</i>
+							</p>
+						</div>
+						<input type="submit" value="立即注册"/>
+					</form>
+				</div>
+				<div class="friend">
+					<p>使用合作伙伴账号登录：</p>
+					<p>
+						<a href="javascript:;" class="yhd"></a>
+						<a href="javascript:;" class="zfb"></a>
+						<a href="javascript:;" class="qq"></a>
+						<a href="javascript:;" class="wb"></a>
+						<a href="javascript:;" class="wlt"></a>
+						<a href="javascript:;" class="wy"></a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="reg_foot">
+			<div class="reg_foot_con">
+				<p>
+					<a href="javascript:;">关于1药网</a>|
+					<a href="javascript:;">互联网药品交易资格证</a>|
+					<a href="javascript:;">互联网药品信息服务资格证</a>
+				</p>
+				<p>
+					<a href="javascript:;">连锁营业执照</a>|
+					<a href="javascript:;">保健食品卫生许可证</a>|
+					<a href="javascript:;">医疗器械许可证</a>|
+					<a href="javascript:;">食品流通许可证</a>|
+					<a href="javascript:;">GSP证书</a>|
+					<a href="javascript:;">粤ICP备12015869号</a>
+				</p>
+				<p>
+					Copyright© 1药网 2010-2015， All Rights Reserved
+				</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/libs/require.min.js" data-main="js/register.js"></script>
 	</body>
 </html>
