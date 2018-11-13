@@ -248,7 +248,8 @@ position: relative;
 }
 .hcar{
 width: 268px;
-height: 200px;
+min-height: 50px;
+max-height: 200px;
 overflow: auto;
 position: absolute;
 z-index: 99;
@@ -261,6 +262,25 @@ border: #e72418 2px solid;
 .hcar ul{
 width: 100%;
 height: 100%;
+}
+.hcar>p{
+color: #a5a5a5;
+position: relative;
+z-index: -1;
+}
+.hcar>p img{
+float: left;
+margin-left: 30px;
+}
+.hcar>p span:nth-of-type(1){
+float: right;
+margin-top: 18px;
+margin-right: 26px;
+}
+.hcar>p span:nth-of-type(2){
+float: right;
+margin-right: 97px;
+margin-top: 6px;
 }
 .hcar ul li{
 width: 100%;
@@ -404,7 +424,6 @@ position: relative;
 }
 .fenlei ul{
 width: 182px;
-/*height: 400px;*/
 background: #314349;
 overflow: hidden;
 }
@@ -422,7 +441,6 @@ float: left;
 }
 .fenlei .tab_show>div{
 width: 1010px;
-/*height: 400px;*/
 position: absolute;
 left: 182px;
 top: 0;

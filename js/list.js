@@ -185,7 +185,22 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 				}
 			}
 		});
+		//价格筛选
+		$(".zhonghe>p input:nth-of-type(2)").focus(function(){
+			$(this).blur(function(){
+				var x = parseInt($(".zhonghe>p input:nth-of-type(1)").val());
+				var d = parseInt($(".zhonghe>p input:nth-of-type(2)").val());
+				for(var i = 0; i < data.drug.length; i++) {
+					if(parseInt(data.drug[i].onePrice)<=x||parseInt(data.drug[i].onePrice)>=d){
+						$(arr[i]).parent().parent().css({
+							display:"none"
+						})
+					};
+				};
+			});
+		});
 	});
+	
 	//模块化加载尾部
 	footer.loadfooter();
 	//模块化加载右侧导航栏

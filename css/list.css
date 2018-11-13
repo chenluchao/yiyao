@@ -34,9 +34,12 @@ left: 260px;
 }
 #xdb input[type=button]{
 bottom: 2px;
+border: 1px solid #b9a898;
+height: 47px;
 }
 #xdb input[type=text]{
-margin: 0 0 0 0;
+height: 45px;
+margin: 1px 0 0 0;
 }
 #xdb ul{
 width: 534px;

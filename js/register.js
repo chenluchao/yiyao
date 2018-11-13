@@ -168,6 +168,7 @@ requirejs(["jquery", "cookie"], function($) {
 			}
 		}
 	});
+	//同意协议
 	$(".agree input[type='checkbox']").bind("input propertychange",function(){
 		if($(this).is(":checked")){
 			$(".agree p i").css({
@@ -179,5 +180,8 @@ requirejs(["jquery", "cookie"], function($) {
 			});
 		}
 	});
+	
+	
+	
 	
 });

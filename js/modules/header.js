@@ -71,7 +71,18 @@ define(['jquery'], function($) {
 				}
 				var nu = $(".erwei_box .hcar ul").children().length;
 				$(".erwei_box .buycar").children().eq(1).html(nu);
+				if($(".erwei_box .hcar ul").children().length==0){
+				$(".hcar>p").css({
+					display:"block"
+				});
+			}else{
+				$(".hcar>p").css({
+					display:"none"
+				});
+			}
 			});
+			
+			
 		});
 	};
 	function show() {
