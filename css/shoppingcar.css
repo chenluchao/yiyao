@@ -523,12 +523,17 @@ cursor: pointer;
 .carfixed>button:nth-of-type(2){
 border: 1px solid #E41C0C;
 background: #fff;
-color: #E41C0C;
+
 margin-right: 10px;
 }
+.carfixed>button:nth-of-type(2) a{
+color: #E41C0C;
+}
 .carfixed>button:nth-of-type(2):hover{
-color: #fff;
 background: #E41C0C;
+}
+.carfixed>button:nth-of-type(2):hover a{
+color: #fff;
 }
 /*去结算按钮*/
 .carfixed>button:nth-of-type(1){

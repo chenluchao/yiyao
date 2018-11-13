@@ -309,11 +309,10 @@ cursor: pointer;
 background: #E71A0F;
 color: white;
 border-bottom: 2px solid #a00;
-box-sizing: border-box;
 }
 .succes .sucon .an a:nth-of-type(1) input:hover{
-border: none;
 background: #D80000;
+border: none;
 }
 .succes .sucon .an a:nth-of-type(2) input{
 background: white;
