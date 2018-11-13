@@ -216,5 +216,28 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 	footer.loadfooter();
 	//模块化加载右侧导航栏
 	rightfixed.loadrightfixed();
-	
+	//点击加入购物车设置cookie
+	$(".xqmid .addcar").click(function(){
+		this.index=1;
+		var numb=$(".xqmid .number input").val();
+		var car = getCookie("car");
+			//如果没有car这个cookie则设置该cookie并且把点击的商品添加进去
+			if(!car) {
+				setCookie("car", this.index + "|"+numb, 7);
+			} else { //如果已经有car这个cookie
+				if(!findRepeat(this.index)) { //如果之前没有点击当前点击的按钮则则添加进cookie
+					setCookie("car", car + "&" + this.index + "|"+numb, 7);
+				} else { //如果之前已经添加过该商品
+					var carpros = car.split("&"); //将整个car拆分
+					for(var i = 0; i < carpros.length; i++) {
+						var pro = carpros[i].split("|");
+						if(this.index == pro[0]) { //找到当前点击的商品的index并将其数目加numb
+							pro[1] = parseInt(pro[1])+parseInt(numb);
+							carpros.splice(i, 1, pro.join("|")); //加1后将更改后的该商品重新以|连接成为表示该商品的cookie段
+						}
+					}
+					setCookie("car", carpros.join("&"), 7); //将操作完的所有商品重新连接成为一个新的完整的coolie以&连接
+				}
+			}
+	});
 });

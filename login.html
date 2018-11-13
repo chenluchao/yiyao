@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>登录</title>
-		<link rel="shortcut icon" href="images/title_logo.ico" /> 
+		<link rel="shortcut icon" href="images/title_logo.ico" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/login.css" />
 	</head>
+
 	<body>
 		<div class="log_head">
 			<div class="log_head_con">
-				<a href="index.html"><img src="https://s.maiyaole.com/images/passport/yao_logo.png"/></a>
+				<a href="index.html"><img src="https://s.maiyaole.com/images/passport/yao_logo.png" /></a>
 			</div>
 		</div>
 		<div class="log_main">
@@ -31,12 +33,65 @@
 									Hi，欢迎登录！
 									<span>还不是1药网会员？<a href="javascript:;">免费注册</a></span>
 								</h2>
-								
-								
-								
+								<form action="" method="post">
+									<div class="ysy">
+										<i></i>
+										<input type="text" name="" placeholder="邮箱/手机号/用户名" required="required" />
+									</div>
+									<div class="ysy">
+										<i class="pass"></i>
+										<input type="password" name="" placeholder="登录密码" required="required" />
+									</div>
+									<div class="checkb">
+										<input type="checkbox" name="" id="" />
+										<span>两周内免登录</span>
+									</div>
+
+									<input type="submit" value="登录" />
+								</form>
+								<div class="friend">
+									<p>使用合作伙伴账号登录：</p>
+									<p>
+										<a href="javascript:;" class="yhd"></a>
+										<a href="javascript:;" class="zfb"></a>
+										<a href="javascript:;" class="qq"></a>
+										<a href="javascript:;" class="wb"></a>
+										<a href="javascript:;" class="wlt"></a>
+										<a href="javascript:;" class="wy"></a>
+									</p>
+								</div>
 							</div>
 							<div id="ks">
-								快速登录
+								<h2>
+									Hi，欢迎登录！
+									<span>还不是1药网会员？<a href="javascript:;">免费注册</a></span>
+								</h2>
+								<form action="" method="post">
+									<div id="tis">
+										<div class="ysy">
+											<i></i>
+											<input id="sjh" type="tel" pattern="[0-9]{11}" name="" placeholder="请输入您的手机号" required="required" />
+										</div>
+										<span>手机号格式不正确</span>
+									</div>
+									<div id="yzmb" class="ysy">
+										<i id="dx" class="pass"></i>
+										<input id="yzm" type="password" name="" placeholder="请输入短信验证码" required="required" />
+									</div>
+									<button>获取短信验证码</button>
+									<input type="submit" value="登录" />
+								</form>
+								<div class="friend">
+									<p>使用合作伙伴账号登录：</p>
+									<p>
+										<a href="javascript:;" class="yhd"></a>
+										<a href="javascript:;" class="zfb"></a>
+										<a href="javascript:;" class="qq"></a>
+										<a href="javascript:;" class="wb"></a>
+										<a href="javascript:;" class="wlt"></a>
+										<a href="javascript:;" class="wy"></a>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -65,4 +120,5 @@
 		</div>
 		<script type="text/javascript" src="js/libs/require.min.js" data-main="js/login.js"></script>
 	</body>
+
 </html>
