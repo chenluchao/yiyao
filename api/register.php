@@ -40,7 +40,7 @@ $password = trim($_POST['password']);
 
 //初始化数据库工具
 try {
-    $pdo = new PDO("mysql:host=localhost;dbname=shop;charset=utf8;", "root", "", [
+    $pdo = new PDO("mysql:host=localhost;dbname=shop;charset=utf8;", "root", "root", [
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
     ]);
 } catch (PDOException $ex) {
@@ -51,7 +51,6 @@ try {
 }
 
 //有效性验证
-
 
 //真实性验证
 if ($pdo->query("SELECT * FROM shop_users WHERE uname='{$uname}'")->rowCount()) {
@@ -129,7 +128,8 @@ if (false !== $pdo->exec("INSERT INTO shop_users SET uname='{$uname}', password 
             ]));
         }
 
-    } else {
+    }
+     else {
         exit(json_encode([
             "errorCode" => 1000,
             "attach" => "无头像上传",

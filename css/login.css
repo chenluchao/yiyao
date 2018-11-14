@@ -141,6 +141,10 @@ margin-bottom: 20px;
 .checkb input{
 vertical-align: middle;
 margin-right: 3px;
+cursor: pointer;
+}
+.checkb label span{
+cursor: pointer;
 }
 .tab_show input[type=submit]{
 width: 326px;
@@ -149,6 +153,7 @@ background: #0099F1;
 font-weight: bold;
 padding: 6px 12px;
 color: #fff;
+cursor: pointer;
 font-size: 16px;
 vertical-align: middle;
 border: 1px solid transparent;

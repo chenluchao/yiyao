@@ -140,10 +140,14 @@ margin-bottom: 10px;
 }
 .agree p input{
 vertical-align: middle;
+cursor: pointer;
 }
 .agree p span{
 vertical-align: middle;
 color: #a5a5a5;
+}
+.agree p label{
+cursor: pointer;
 }
 .agree p span a{
 color: #0083ce;
@@ -153,6 +157,7 @@ text-decoration: underline;
 }
 .agree p i{
 color: #e72418;
+display:none;
 }
 .friend{
 width: 342px;

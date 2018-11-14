@@ -33,7 +33,7 @@
 									Hi，欢迎登录！
 									<span>还不是1药网会员？<a href="register.html">免费注册</a></span>
 								</h2>
-								<form action="" method="post">
+								<form class="login" action="" method="post">
 									<div class="ysy">
 										<i></i>
 										<input type="text" name="uname" placeholder="邮箱/手机号/用户名" required="required" />
@@ -43,8 +43,10 @@
 										<input type="password" name="password" placeholder="登录密码" required="required" />
 									</div>
 									<div class="checkb">
-										<input type="checkbox" name="mianlog" id="" />
-										<span>两周内免登录</span>
+										<label>
+											<input type="checkbox" name="mianlog" id="" />
+											<span>两周内免登录</span>
+										</label>
 									</div>
 									<input type="submit" value="登录" />
 								</form>

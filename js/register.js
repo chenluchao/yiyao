@@ -180,8 +180,25 @@ requirejs(["jquery", "cookie"], function($) {
 			});
 		}
 	});
-	
-	
-	
-	
+	$(".reg_form input[type=submit]").click(function(){
+		var name=$(".reg_form .dianhua").val();
+		var face=$(".reg_form .face").val();
+		var pas=$(".reg_form .mi").val();
+		$.ajax({
+			type:"post",
+			url:"api/register.php",
+			contentType:"application/json",
+			data:{
+				uname:name,
+				password:pas,
+				uface:face
+			},
+			success:function(data){
+				console.log(data)
+			}
+			
+		});
+		return false;
+	});
 });
+ 

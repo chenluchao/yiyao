@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+define(['jquery', 'cookie'], function($) {
 	function loadheader() {
 		$(".loadhead").load("html/header.html", function() {
 			//改变头部地址显示
@@ -54,37 +54,57 @@ define(['jquery'], function($) {
 			$.get("data/list.json").done(function(data) {
 				var ul = document.querySelector(".erwei_box .hcar ul");
 				var apro = getCookie("car").split("&");
-				for(var i = 0; i < apro.length; i++) {
-					var pro = apro[i].split("|");
-					var info = find(data.drug, pro[0]);
-					var li = document.createElement("li");
-					var p = document.createElement("p");
-					p.innerHTML = "<img src='" + info.imgUrl + "' />";
-					li.appendChild(p);
-					var span = document.createElement("span");
-					span.innerHTML = "￥<i>" + info.onePrice + "</i>";
-					li.appendChild(span);
-					var span1 = document.createElement("span");
-					span1.innerHTML = info.title;
-					li.appendChild(span1);
-					ul.appendChild(li);
+				if(apro != 0) {
+					for(var i = 0; i < apro.length; i++) {
+						var pro = apro[i].split("|");
+						var info = find(data.drug, pro[0]);
+						var li = document.createElement("li");
+						var p = document.createElement("p");
+						p.innerHTML = "<img src='" + info.imgUrl + "' />";
+						li.appendChild(p);
+						var span = document.createElement("span");
+						span.innerHTML = "￥<i>" + info.onePrice + "</i>";
+						li.appendChild(span);
+						var span1 = document.createElement("span");
+						span1.innerHTML = info.title;
+						li.appendChild(span1);
+						ul.appendChild(li);
+					}
 				}
 				var nu = $(".erwei_box .hcar ul").children().length;
 				$(".erwei_box .buycar").children().eq(1).html(nu);
-				if($(".erwei_box .hcar ul").children().length==0){
-				$(".hcar>p").css({
-					display:"block"
-				});
-			}else{
-				$(".hcar>p").css({
-					display:"none"
-				});
-			}
+				if($(".erwei_box .hcar ul").children().length == 0) {
+					$(".hcar>p").css({
+						display: "block"
+					});
+				} else {
+					$(".hcar>p").css({
+						display: "none"
+					});
+				}
 			});
-			
+			if(getCookie("log")){
+				var login = getCookie("log").split("|")
+				if(login[1] == 0) {
+					$(".head_a .login").css({
+						visibility: "hidden"
+					});
+					$(".head_a #yonghu").css({
+						display:"inline-block"
+					}).html("欢迎："+login[0])
+				} else {
+					$(".head_a .login").css({
+						visibility: "visible"
+					});
+					$(".head_a #yonghu").css({
+						display:"none"
+					})
+				}
+			}
 			
 		});
 	};
+
 	function show() {
 		//头部地址二级菜单
 		var timer;

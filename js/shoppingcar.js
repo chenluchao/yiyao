@@ -15,6 +15,25 @@ requirejs.config({
 	}
 });
 requirejs(["jquery", "extend", "cookie"], function($) {
+	if(getCookie("log")){
+		var logins = getCookie("log").split("|");
+		if(logins[1] == 0) {
+			$(".head_a .blue").css({
+				visibility: "hidden"
+			});
+			$(".head_a #user").css({
+				display: "inline-block"
+			}).html(logins[0])
+		} else {
+			$(".head_a .login").css({
+				visibility: "visible"
+			});
+			$(".head_a #user").css({
+				display: "none"
+			})
+		}
+	}
+	
 	$(".head .dizhi ul li i").click(function() {
 		$(".head .ieam").html(this.innerHTML)
 		$(".head .dizhi").css({
@@ -129,7 +148,7 @@ requirejs(["jquery", "extend", "cookie"], function($) {
 				//全选计算全部重量
 				//获取总重量按钮内的值
 				var zz = parseFloat($(".carfoot ul li:nth-of-type(1)").children().children().html());
-				zz=0;
+				zz = 0;
 				//将所有的商品的价格全部遍历相加到总重量中
 				$(".buyshow ul li .gou").each(function() {
 					zz += parseFloat($(this).parent().parent().children().eq(5).children().html())
@@ -140,7 +159,7 @@ requirejs(["jquery", "extend", "cookie"], function($) {
 				//全选价格
 				//获取总价钱按钮内的值
 				var zq = parseFloat($(".carfoot ul li:nth-of-type(4)").children().children().html());
-				zq=0;
+				zq = 0;
 				//利用遍历将所有商品的价格和计算出来
 				$(".buyshow ul li .gou").each(function() {
 					zq += parseFloat($(this).parent().parent().children().eq(7).children().children().html())

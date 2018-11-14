@@ -3,7 +3,6 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
 		<title>注册1药网</title>
 		<link rel="shortcut icon" href="images/title_logo.ico" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
@@ -24,7 +23,7 @@
 					<span>我已经注册，现在就<a href="login.html">登录</a></span>
 				</h2>
 				<div class="reg_form">
-					<form action="" method="post">
+					<form action="api/register.php" method="post">
 						<div class="tel">
 							<div class="telshow">
 								<i></i>
@@ -68,12 +67,14 @@
 							</div>
 						</div>
 						<div class="toux">
-							<a href="javascript:;"><input name="uface" type="file" required="required" name="" id="" />上传头像</a>
+							<a href="javascript:;"><input class="face" name="uface" type="file" required="required" name="" id="" />上传头像</a>
 						</div>
 						<div class="agree">
 							<p>
-								<input type="checkbox" name="agree" id="agree" required="required" />
-								<span>我已阅读并同意<a href="javascript:;">《1药网服务协议》</a></span>
+								<label>
+									<input type="checkbox" name="agree" id="agree" required="required" checked="checked" />
+									<span>我已阅读并同意<a href="javascript:;">《1药网服务协议》</a></span>
+								</label>
 								<i>请勾选1药网服务协议</i>
 							</p>
 						</div>
