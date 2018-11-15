@@ -15,25 +15,25 @@ requirejs.config({
 	}
 });
 requirejs(["jquery", "extend", "cookie"], function($) {
-	if(getCookie("log")){
+	if(getCookie("log")) {
 		var logins = getCookie("log").split("|");
 		if(logins[1] == 0) {
 			$(".head_a .blue").css({
-				visibility: "hidden"
+				display: "none"
 			});
 			$(".head_a #user").css({
 				display: "inline-block"
 			}).html(logins[0])
 		} else {
 			$(".head_a .login").css({
-				visibility: "visible"
+				display: "inline-block"
 			});
 			$(".head_a #user").css({
 				display: "none"
 			})
 		}
 	}
-	
+
 	$(".head .dizhi ul li i").click(function() {
 		$(".head .ieam").html(this.innerHTML)
 		$(".head .dizhi").css({
@@ -90,44 +90,47 @@ requirejs(["jquery", "extend", "cookie"], function($) {
 	//通过cookie的值动态生成购物车内的商品列表
 	$.get("data/list.json").done(function(data) {
 		var buy = document.querySelector(".maincar .buyshow");
-		var apro = getCookie("car").split("&");
-		for(var i = 0; i < apro.length; i++) {
-			var pro = apro[i].split("|");
-			var info = find(data.drug, pro[0]);
-			var ul = document.createElement("ul");
-			var li0 = document.createElement("li");
-			var span = document.createElement("span");
-			span.className = "zhong";
-			li0.appendChild(span);
-			ul.appendChild(li0);
-			var li1 = document.createElement("li");
-			li1.innerHTML = "<img src='" + info.imgUrl + "' />"
-			ul.appendChild(li1);
-			var li2 = document.createElement("li");
-			li2.innerHTML = "<span class='name'>" + info.title + "</span><button>修改<button>";
-			ul.appendChild(li2);
-			var li3 = document.createElement("li");
-			li3.innerHTML = "<span>&yen<i class='qian'>" + info.onePrice + "</i></span>";
-			ul.appendChild(li3);
-			var li4 = document.createElement("li");
-			li4.innerHTML = "<input class='jian' type='button' onclick='changeNum(" + pro[0] + ",-1)' /><input class='geshu' type='text' value='" + pro[1] + "' disabled='disabled' /><input class='jia' type='button' onclick='changeNum(" + pro[0] + ",1)' />";
-			ul.appendChild(li4);
-			var li5 = document.createElement("li");
-			var z = Number(info.kg * pro[1]).toFixed(2);
-			li5.innerHTML = "<span>" + z + "</span>Kg";
-			ul.appendChild(li5);
-			var li6 = document.createElement("li");
-			li6.innerHTML = "有货";
-			ul.appendChild(li6);
-			var li7 = document.createElement("li");
-			var q = Number(info.onePrice * pro[1]).toFixed(2);
-			li7.innerHTML = "<span>&yen<i>" + q + "</i></span>";
-			ul.appendChild(li7);
-			var li8 = document.createElement("li");
-			li8.innerHTML = "<a href='javascript:;'>收藏</a><a href='javascript:;' class='shanchu' onclick='changeNum(" + pro[0] + ",-999999)'>删除</a><a href='javascript:;'>找相似</a>";
-			ul.appendChild(li8);
-			buy.appendChild(ul);
+		if(getCookie("car")) {
+			var apro = getCookie("car").split("&");
+			for(var i = 0; i < apro.length; i++) {
+				var pro = apro[i].split("|");
+				var info = find(data.drug, pro[0]);
+				var ul = document.createElement("ul");
+				var li0 = document.createElement("li");
+				var span = document.createElement("span");
+				span.className = "zhong";
+				li0.appendChild(span);
+				ul.appendChild(li0);
+				var li1 = document.createElement("li");
+				li1.innerHTML = "<img src='" + info.imgUrl + "' />"
+				ul.appendChild(li1);
+				var li2 = document.createElement("li");
+				li2.innerHTML = "<span class='name'>" + info.title + "</span><button>修改<button>";
+				ul.appendChild(li2);
+				var li3 = document.createElement("li");
+				li3.innerHTML = "<span>&yen<i class='qian'>" + info.onePrice + "</i></span>";
+				ul.appendChild(li3);
+				var li4 = document.createElement("li");
+				li4.innerHTML = "<input class='jian' type='button' onclick='changeNum(" + pro[0] + ",-1)' /><input class='geshu' type='text' value='" + pro[1] + "' disabled='disabled' /><input class='jia' type='button' onclick='changeNum(" + pro[0] + ",1)' />";
+				ul.appendChild(li4);
+				var li5 = document.createElement("li");
+				var z = Number(info.kg * pro[1]).toFixed(2);
+				li5.innerHTML = "<span>" + z + "</span>Kg";
+				ul.appendChild(li5);
+				var li6 = document.createElement("li");
+				li6.innerHTML = "有货";
+				ul.appendChild(li6);
+				var li7 = document.createElement("li");
+				var q = Number(info.onePrice * pro[1]).toFixed(2);
+				li7.innerHTML = "<span>&yen<i>" + q + "</i></span>";
+				ul.appendChild(li7);
+				var li8 = document.createElement("li");
+				li8.innerHTML = "<a href='javascript:;'>收藏</a><a href='javascript:;' class='shanchu' onclick='changeNum(" + pro[0] + ",-999999)'>删除</a><a href='javascript:;'>找相似</a>";
+				ul.appendChild(li8);
+				buy.appendChild(ul);
+			}
 		}
+
 		//删除选中的商品
 		$(".carfixed>ul>li:nth-of-type(2)").click(function() {
 			var apro = getCookie("car").split("&");

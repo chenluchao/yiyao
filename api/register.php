@@ -32,6 +32,7 @@ date_default_timezone_set("Asia/Shanghai");
  *              3003 转移文件错误
  *         info :     注册的新用户信息
  *         attach :   附加的提示信息
+ *         
  *              
  */
 
@@ -51,6 +52,7 @@ try {
 }
 
 //有效性验证
+
 
 //真实性验证
 if ($pdo->query("SELECT * FROM shop_users WHERE uname='{$uname}'")->rowCount()) {
@@ -128,8 +130,7 @@ if (false !== $pdo->exec("INSERT INTO shop_users SET uname='{$uname}', password 
             ]));
         }
 
-    }
-     else {
+    } else {
         exit(json_encode([
             "errorCode" => 1000,
             "attach" => "无头像上传",

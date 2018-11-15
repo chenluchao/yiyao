@@ -57,10 +57,10 @@ requirejs(["jquery", "extend", "cookie"], function($) {
 					var log = getCookie("log");
 					//如果没有log这个cookie则设置该cookie并且把点击的商品添加进去
 					if(!log) {
-						setCookie("log",a.info.uname+"|"+a.errorCode, 7);
+						setCookie("log",a.info.uname+"|"+a.errorCode, 1);
 					} else { //如果已经有log这个cookie则先清除后再重新设置cookie
 						removeCookie("log");
-						setCookie("log",a.info.uname+"|"+a.errorCode, 7);
+						setCookie("log",a.info.uname+"|"+a.errorCode, 1);
 					}
 					window.location.replace("index.html");
 				} else if(a.errorCode == 1001) {

@@ -83,25 +83,29 @@ define(['jquery', 'cookie'], function($) {
 					});
 				}
 			});
-			if(getCookie("log")){
+			if(getCookie("log")) {
 				var login = getCookie("log").split("|")
-				if(login[1] == 0) {
+				if(login[1] == 0 || login[1] == 1000) {
 					$(".head_a .login").css({
-						visibility: "hidden"
+						display: "none"
 					});
 					$(".head_a #yonghu").css({
-						display:"inline-block"
-					}).html("欢迎："+login[0])
+						display: "inline-block"
+					}).html("欢迎：" + login[0] + "<b id='tui'>[退出]</b>")
 				} else {
 					$(".head_a .login").css({
-						visibility: "visible"
+						display: "inline-block"
 					});
 					$(".head_a #yonghu").css({
-						display:"none"
+						display: "none"
 					})
 				}
+				$("#tui").click(function() {
+					removeCookie("log");
+					window.location.reload(true);
+				})
 			}
-			
+
 		});
 	};
 

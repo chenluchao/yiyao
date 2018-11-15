@@ -9,6 +9,9 @@ margin: 0 auto;
 width: 1195px;
 text-align: center;
 }
+.head_a #tui{
+color: gray;
+}
 .jinggao span:nth-child(1){
 color: #d60107;
 line-height: 25px;
