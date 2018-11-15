@@ -257,7 +257,7 @@ overflow: auto;
 position: absolute;
 z-index: 99;
 top: 80px;
-left: 75px;
+left: 0px;
 background: white;
 display: none;
 border: #e72418 2px solid;
@@ -318,9 +318,13 @@ height: 40px;
 overflow: hidden;
 line-height: 20px;
 }
+.hcar ul li span a:hover{
+text-decoration: underline;
+color: red;
+}
 .hcar ul li span:nth-of-type(1){
 margin-top: 20px;
-margin-right: 20px;
+margin-right: 3px;
 font-size: 16px;
 color: red;
 }

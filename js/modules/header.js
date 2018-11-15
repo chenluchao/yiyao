@@ -63,10 +63,10 @@ define(['jquery', 'cookie'], function($) {
 						p.innerHTML = "<img src='" + info.imgUrl + "' />";
 						li.appendChild(p);
 						var span = document.createElement("span");
-						span.innerHTML = "￥<i>" + info.onePrice + "</i>";
+						span.innerHTML = "￥<i>" + info.onePrice + "</i>*"+pro[1];
 						li.appendChild(span);
 						var span1 = document.createElement("span");
-						span1.innerHTML = info.title;
+						span1.innerHTML = "<a href='details.html' target='_blank'>"+info.title+"</a>";
 						li.appendChild(span1);
 						ul.appendChild(li);
 					}

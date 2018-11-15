@@ -155,7 +155,7 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 			next: "下一页",
 			perPage: 12
 		});
-	//关于cookie
+		//关于cookie
 		//定义数组用以存储获取的所有button按钮
 		var arr = [];
 		arr = $(".container li").find(":button:last");
@@ -184,23 +184,24 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 					setCookie("car", carpros.join("&"), 7); //将操作完的所有商品重新连接成为一个新的完整的coolie以&连接
 				}
 			}
+
 		});
 		//价格筛选
-		$(".zhonghe>p input:nth-of-type(2)").focus(function(){
-			$(this).blur(function(){
+		$(".zhonghe>p input:nth-of-type(2)").focus(function() {
+			$(this).blur(function() {
 				var x = parseInt($(".zhonghe>p input:nth-of-type(1)").val());
 				var d = parseInt($(".zhonghe>p input:nth-of-type(2)").val());
 				for(var i = 0; i < data.drug.length; i++) {
-					if(parseInt(data.drug[i].onePrice)<=x||parseInt(data.drug[i].onePrice)>=d){
+					if(parseInt(data.drug[i].onePrice) <= x || parseInt(data.drug[i].onePrice) >= d) {
 						$(arr[i]).parent().parent().css({
-							display:"none"
+							display: "none"
 						})
 					};
 				};
 			});
 		});
 	});
-	
+
 	//模块化加载尾部
 	footer.loadfooter();
 	//模块化加载右侧导航栏

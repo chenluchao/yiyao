@@ -66,21 +66,25 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 		}
 	});
 	//立即扫码效果实现
+	var timee;
 	$(".mabao b").hover(function(){
+		clearTimeout(timee);
 		$(".xqmid .mama").css({
 			display:"block"
 		}).stop().animate({
 			top:65
-		},600)
+		},600).animate({
+			top:50
+		})
 	},function(){
 		$(".xqmid .mama").stop().animate({
 			top:30
-		},500);
-		setTimeout(function(){
+		},300)
+		timee = setTimeout(function(){
 			$(".xqmid .mama").css({
 				display:"none"
 			})
-		},600)
+		},300)
 	});
 	$(".xqmid .addcar").click(function(){
 		$(".xqmid .succes").css({
