@@ -135,7 +135,10 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 	//进行多选
 	$(".screen .yinchang span:nth-of-type(n+2)").click(function() {
 		if($(this).hasClass("xuanz")) {
-			$(this).removeClass("xuanz").parent().removeClass("gaiqd");
+			$(this).removeClass("xuanz");
+			if($(this).siblings(".xuanz").length==0){
+				$(this).parent().removeClass("gaiqd");
+			}
 		} else {
 			$(this).addClass("xuanz").parent().addClass("gaiqd")
 		}
@@ -156,6 +159,43 @@ requirejs(["jquery", "swiper", "baiduT", "header", "footer", "rightfixed", "exte
 			perPage: 12
 		});
 		//关于cookie
+		
+		
+		
+		
+		//生成新详情页
+		//定义数组用以存储获取的所有查看详情button按钮
+		var xqbut=[];
+		xqbut = $(".container li").find(":button:first");
+		for(var i = 0; i < data.drug.length; i++) {
+			xqbut[i].index = data.drug[i].itemId;
+		}
+		//点击查看详情跳转到该商品
+		$(".container li").find(":button:first").click(function() {
+			var det = getCookie("det");
+			if(!det){
+				setCookie("det", this.index,1);
+			}else{
+				removeCookie("det");
+				setCookie("det", this.index,1);
+			}
+		});
+		//点击列表内非查看详情按钮跳转到该商品
+		var xqbutd=[];
+		xqbutd = $(".container li .godet");
+		for(var i = 0; i < data.drug.length; i++) {
+			xqbutd[i].index = data.drug[i].itemId;
+		}
+		$(".container li .godet").click(function() {
+			var det = getCookie("det");
+			if(!det){
+				setCookie("det", this.index,1);
+			}else{
+				removeCookie("det");
+				setCookie("det", this.index,1);
+			}
+		});
+		
 		//定义数组用以存储获取的所有button按钮
 		var arr = [];
 		arr = $(".container li").find(":button:last");
